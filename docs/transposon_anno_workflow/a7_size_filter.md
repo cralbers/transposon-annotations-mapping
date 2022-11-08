@@ -1,0 +1,71 @@
+---
+aliases: [step 7]
+---
+# step 7 of [[a0_overall_anno_workflow|overall annotation workflow]]
+> [!previous step]
+> [[a6_anno_stats]]
+- now need to implement manual size filtering step to get rid of TEs that are outside of canonical literature ranges because programs in TEUlt will sometimes annotate HUGE portions of chromosomes as TEs
+- python function (in .py file and jupyter notebook)
+	- [[TEUlt_reasonaTE_sizefilter.py]] (python file)
+	- [[TEUlt_reasonaTE_sizefilter.ipynb]] (jupyter notebook)
+- this is really tricky because how do you establish parameters that do not eliminate tandem repeats or nested TEs, but also get rid of ridiculous TEs?
+	- scan for tandem repeats with another program and compare to stringently eliminated TEs?
+
+
+### in & out:
+<table cellpadding="5" style="border: 1px solid black">
+    <tr style="border: 1px solid black">
+        <td style="border: 1px solid black" >INPUT</td>
+        <td style="border: 1px solid black">gff3 output files from TEUlt, txt file of chromosome lengths</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black">OUTPUT</td>
+        <td style="border: 1px solid black">new gff3 with only TEs that made it through size filtering</td>
+    </tr>
+</table>
+
+
+### stringent size parameters
+- DNA:
+TE | size (bp) 
+------------ | ------------
+Helitron | 4500
+CMC | 2500
+Zator | 1800-2400
+hAT | 1000-2000
+Sola | 1- 2000-6000, 2- 4000-5000, 3- 5000-7000
+Tc1/Mariner | 1600
+MITE | 100-800
+Novosib | 
+- Retro:
+TE | size (bp) 
+------------ | ------------
+Gypsy | 9000
+Copia| 5000
+LINEs| 5000
+SINEs| 600
+ERV| 8000
+
+
+### non-stringent size parameters
+- DNA:
+TE | size (bp) 
+------------ | ------------
+Helitron | 20000
+CMC | 20000
+Zator | 15000
+hAT | 20000
+Sola | 7000
+Tc1/Mariner | 20000
+MITE | 1000
+Novosib | 3000
+- Retro:
+TE | size (bp) 
+------------ | ------------
+Gypsy | 20000
+Copia| 20000
+LINEs| 10000
+SINEs| 600
+ERV| 8000
+
+
