@@ -1,11 +1,1 @@
-# Obsidian Notes
-
-Publish your public notes with MkDocs
-
-## Hello World!
-
-The `index.md` in the `/docs` folder is the homepage you see here.
-
-The folders in `/docs` appear as the main sections on the navigation bar.
-
-The notes appear as pages within these sections. For example, [[Note 1]] in `Topic 1`
+This is the only way I could figure out how to publish this Obsidian vault with all of the transposon annotation and mapping workflow information in a way that is actually helpful to others.
