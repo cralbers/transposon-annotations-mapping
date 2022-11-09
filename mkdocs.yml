@@ -1,4 +1,4 @@
-site_name: obsidian-mkdocs template
+site_name: Transposon Annotations and Mapping
 
 theme:
     name: 'material'
@@ -21,6 +21,7 @@ theme:
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
+
     features:
         - navigation.expand
 
@@ -44,7 +45,7 @@ markdown_extensions:
 
   - toc:
       permalink: true
-      
+
   - wikilinks
 
 plugins:
