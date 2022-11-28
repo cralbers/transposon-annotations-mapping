@@ -23,6 +23,7 @@ aliases: [overall mapping workflow]
 ```mermaid
 graph TD
 	A[[m1_bedtools_intersect]] --> B[[m2_jupyterparty]]
+	B --> C[[m3_rideogram]]
 
 class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z internal-link; 
 ```
@@ -34,4 +35,5 @@ graph TD
 ```
 ## dependencies
 - bedtools
-- 
+- R
+	- RIdeogram (package)

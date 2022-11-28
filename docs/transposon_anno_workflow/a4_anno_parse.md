@@ -8,7 +8,7 @@ aliases: [step 4]
 - need to parse annotations so that they are all in the same format and can be used in the rest of the pipeline
 - annotation parsing happens in the **transposon_annotation_tools_env** conda environment
 
-### run annotation parsing:
+### run annotation parsing
 ```python
 conda activate transposon_annotation_tools_env
 reasonaTE -mode parseAnnotations -projectFolder workspace -projectName testProject

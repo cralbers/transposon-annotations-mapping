@@ -3,7 +3,7 @@
 - use bedtools intersect function to determine overlap of genome 1 (N2) transposons with genome 2 (CB) SNPS relative to genome 1 (N2)
 - this allows for generation of unique transposon sequences that can be tracked between genomes
 
-## bedtools command
+## input and output files
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
         <td style="border: 1px solid black" >INPUT</td>
@@ -16,6 +16,8 @@
 </table>
 - run in command line
 
+
+## bedtools command
 ```bash
 bedtools intersect -wa -wb -a /FinalAnnotations_Transposons.gff3 -b SNPS.vcf
 ```

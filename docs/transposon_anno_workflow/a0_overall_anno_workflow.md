@@ -3,8 +3,11 @@ aliases: [overall annotation workflow]
 ---
 # ANNOTATIONS
 ---
+these notes are located at https://cralbers.github.io/transposon-annotations-mapping/
+
 ## table of contents
 major steps of the transposon annotation and tracking workflow i used because my file organization is absolutely horrific and I want to learn how to use this obsidian program and also apparently i am accountable for what i did lol.
+
 - all of the individual functions that are defined within the TEUlt are explained here -> [[TEUlt_file_fxs]]
 - changes to integrate LTR Retriever -> [[LTRRet_integration]]
 - other random changes to source code -> [[other_source_changes]]

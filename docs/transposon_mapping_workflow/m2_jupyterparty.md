@@ -25,3 +25,5 @@ vcf_file | SNPs vcf
 N2_file | size filtered N2 TE gff3
 CB_file | size filtered CB TE gff3
 chr_lengths_file | text file with lengths of all 6 chromosomes for both genomes
+
+this jupyter notebook will spit out files to make the RIdeogram in the next step in R
