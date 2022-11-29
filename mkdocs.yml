@@ -76,8 +76,8 @@ extra_javascript:
 
 
 nav:
-  - Section:
-    - docs/transposon_anno_workflow/index.md
-    - Page 1: docs/transposon_anno_workflow/a0_overall_anno_workflow.md
-    - Page 2: docs/transposon_anno_workflow/a1_TEUlt_setup.md
-    - Page 3: docs/transposon_anno_workflow/a2_1_anno_TEUlt.md
+  - Transposon Annotations:
+    - transposon_anno_workflow/index.md
+    - Page 1: transposon_anno_workflow/a0_overall_anno_workflow.md
+    - Page 2: transposon_anno_workflow/a1_TEUlt_setup.md
+    - Page 3: transposon_anno_workflow/a2_1_anno_TEUlt.md
