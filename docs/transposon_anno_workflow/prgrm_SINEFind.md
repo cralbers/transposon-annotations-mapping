@@ -17,6 +17,8 @@ aliases: [SINE Finder]
 * Python (minimum v2.5)
 
 ## important notes
-* ==NEED TO RUN CHUNK-WISE==
-    * this is why this program must be run manually- when run through the conda wrapper in Transposon Ultimate, the python recursive memory limit is exceeded for large genomes because the conda wrapper runs SINE Finder in seqwise mode, resulting in the program stopping when the memory limit is reached and subsequently incomplete annotations
+* ==NEED TO RUN CHUNK-WISE== ```
+{ .annotate }
+1. hey, did you run this chunk-wise?
+ * this is why this program must be run manually- when run through the conda wrapper in Transposon Ultimate, the python recursive memory limit is exceeded for large genomes because the conda wrapper runs SINE Finder in seqwise mode, resulting in the program stopping when the memory limit is reached and subsequently incomplete annotations
     * USE EXTENSION: $ -T 'chunkwise'

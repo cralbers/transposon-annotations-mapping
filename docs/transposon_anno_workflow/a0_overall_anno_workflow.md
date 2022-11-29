@@ -5,7 +5,7 @@ aliases: [overall annotation workflow]
 ---
 these notes are located at https://cralbers.github.io/transposon-annotations-mapping/
 
-## table of contents
+## annotation workflow
 major steps of the transposon annotation and tracking workflow i used because my file organization is absolutely horrific and I want to learn how to use this obsidian program and also apparently i am accountable for what i did lol.
 
 - all of the individual functions that are defined within the TEUlt are explained here -> [[TEUlt_file_fxs]]

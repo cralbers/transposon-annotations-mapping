@@ -3,7 +3,7 @@ aliases: [overall mapping workflow]
 ---
 # MAPPING
 ---
-## table of contents
+## mapping workflow
 - walkthrough of workflow for mapping/tracking individual transposon copies between generationally divided isolates of the same species
 - most of this workflow is just concentrated within a humongous jupyter notebook that takes in all of the files and spits out a ton of info about unique TE copies (sequence, length, if/where they moved between strains, etc), files to make ideograms using RIdeogram package and other random bs
 
@@ -19,14 +19,6 @@ aliases: [overall mapping workflow]
 </table>
 
 - [ ] need to change jupyter notebook functions to deal with chromosome names being different between input files
-
-```mermaid
-graph TD
-	A[[m1_bedtools_intersect]] --> B[[m2_jupyterparty]]
-	B --> C[[m3_rideogram]]
-
-class A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z internal-link; 
-```
 
 ```mermaid
 graph TD

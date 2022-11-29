@@ -1,103 +1,103 @@
 this is kind of dumb, but when I was troubleshooting through using TEUlt, it took me forever to figure out which specific scripts defined which steps of the pipeline, and which specific functions so here's a list lol
-# AnnotationChecker.py
-## functions
-### getArgument
+## AnnotationChecker.py
+### functions
+#### getArgument
 - inputs
 	- args
 	- title
 - outputs
 	- empty string
 
-### getFile
+#### getFile
 - inputs
 	- folder
 	- suffix
 - outputs
 	- empty string
-### checkHelitronScanner
+#### checkHelitronScanner
 - inputs
 	- projectFolderPath
 - output
 	- True or False
-### checkLtrHarvest
+#### checkLtrHarvest
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkLtrPred
+#### checkLtrPred
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkMiteFind
+#### checkMiteFind
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkMiteTracker
+#### checkMiteTracker
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkMust
+#### checkMust
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkNCBIDD1000
+#### checkNCBIDD1000
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkRepeatModeler
+#### checkRepeatModeler
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkRepeatMasker
+#### checkRepeatMasker
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkSineFind
+#### checkSineFind
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkSineScan
+#### checkSineScan
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkTirVish
+#### checkTirVish
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkTransposonPSI
+#### checkTransposonPSI
 - inputs
 	- projectFolderPath
 - outputs
 	- True or False
-### checkAnnotations
+#### checkAnnotations
 - inputs
 	- projectFolder, projectName
 - outputs
 	- listOkay
-# AnnotationCommander
-## functions
-### getArgument 
+## AnnotationCommander
+### functions
+#### getArgument 
 - in: args, title
 - out: empty string
-### runHelitronScanner
+#### runHelitronScanner
 - in: projectFolderPath
 - out: runs Helitron Scanner
-### runMust
+#### runMust
 - in: projectFolderPath, addCommand
 - out: runs Must
-### runMiteTracker
+#### runMiteTracker
 - in: projectFolderPath, addCommand
 - out: runs mitetracker
-### runTirVish
+#### runTirVish
 - in: projectFolderPath, addCommand
 - out: runs tirvish

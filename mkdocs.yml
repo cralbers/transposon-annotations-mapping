@@ -24,6 +24,7 @@ theme:
 
     features:
         - navigation.expand
+        - navigation.indexes
 
 # Extensions
 markdown_extensions:
@@ -51,6 +52,10 @@ markdown_extensions:
       permalink: true
 
   - wikilinks
+  - attr_list
+  - md_in_html
+  - pymdownx.tasklist:
+      clickable_checkbox: true
 
 plugins:
   - search
