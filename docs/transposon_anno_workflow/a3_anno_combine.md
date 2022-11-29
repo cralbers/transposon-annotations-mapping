@@ -2,9 +2,9 @@
 aliases: [step 3]
 ---
 # step 3 of [[a0_overall_anno_workflow|overall annotation workflow]]
-> [!previous step]
-[[a2_1_anno_TEUlt]] 
-[[a2_2_anno_manual]]
+!!! info "previous step:"
+    [[a2_1_anno_TEUlt]] 
+    [[a2_2_anno_manual]]
 
 ---
 - at this stage, need to combine output files from any programs you ran locally into wherever you have compiled and are running TEUlt and the two conda environments

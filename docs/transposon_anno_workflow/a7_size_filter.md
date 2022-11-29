@@ -2,8 +2,8 @@
 aliases: [step 7]
 ---
 # step 7 of [[a0_overall_anno_workflow|overall annotation workflow]]
-> [!previous step]
-> [[a6_anno_stats]]
+!!! info "previous step:"
+    [[a6_anno_stats]]
 
 - now need to implement manual size filtering step to get rid of TEs that are outside of canonical literature ranges because programs in TEUlt will sometimes annotate HUGE portions of chromosomes as TEs
 - python function (in .py file and jupyter notebook)

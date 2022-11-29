@@ -2,8 +2,8 @@
 aliases: [step 8]
 ---
 # step 8 of [[a0_overall_anno_workflow|overall annotation workflow]]
-> [!previous step]
-> [[a7_size_filter]]
+!!! info "previous step:"
+    [[a7_size_filter]]
 
 ### in & out
 <table cellpadding="5" style="border: 1px solid black">

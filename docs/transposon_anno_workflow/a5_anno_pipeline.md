@@ -2,8 +2,8 @@
 aliases: [step 5]
 ---
 # step 5 of [[a0_overall_anno_workflow|overall annotation workflow]]
-> [!previous step]
->  [[a4_anno_parse]]
+!!! info "previous step:"
+    [[a4_anno_parse]]
 
 - now that all the annotations are in the same format, can run the TEUlt pipeline which runs duplicate filter, CDHIT, BLASTN and then the copy filter
 
