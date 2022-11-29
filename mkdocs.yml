@@ -25,6 +25,7 @@ theme:
     features:
         - navigation.expand
         - navigation.indexes
+        - navigation.sections
 
 # Extensions
 markdown_extensions:
@@ -72,3 +73,11 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+
+nav:
+  - Section:
+    - docs/transposon_anno_workflow/index.md
+    - Page 1: docs/transposon_anno_workflow/a0_overall_anno_workflow.md
+    - Page 2: docs/transposon_anno_workflow/a1_TEUlt_setup.md
+    - Page 3: docs/transposon_anno_workflow/a2_1_anno_TEUlt.md
