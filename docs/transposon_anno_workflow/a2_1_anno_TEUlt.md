@@ -3,8 +3,8 @@ aliases: [step 2.1]
 ---
 # step 2.1 of [[a0_overall_anno_workflow|overall annotation workflow]]
 - step 2.2: [[a2_2_anno_manual]]
-> [!previous step]
-> [[a1_TEUlt_setup]]
+!!! info "previous step:"
+    [[a1_TEUlt_setup]]
 - transposon ultimate annotations happen in the **transposon_annotation_tools_env** conda environment
 
 ### in & out
