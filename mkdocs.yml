@@ -55,7 +55,9 @@ markdown_extensions:
 plugins:
   - search
   - roamlinks
-  - mermaid2
+  - mermaid2:
+      arguments:
+          securityLevel: 'loose'
 
 extra_javascript:
   - javascripts/mathjax.js

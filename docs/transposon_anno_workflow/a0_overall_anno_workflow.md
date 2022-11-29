@@ -30,6 +30,7 @@ graph TD
 class A,B,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z internal-link;
 
 ```
+## individual steps
 1. [[a1_TEUlt_setup]]
 2. annotation of transposons
 	1. [[a2_1_anno_TEUlt]] (annotate genome using Transposon Ultimate)
