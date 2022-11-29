@@ -15,16 +15,16 @@ major steps of the transposon annotation and tracking workflow i used because my
 
 ``` mermaid 
 graph TD
-	F[[a1_TEUlt_setup]] --> A
-	F[[a1_TEUlt_setup]] --> B
-	A[[a2_1_anno_TEUlt]] -->C(Transposon Annotation)
-	B[[a2_2_anno_manual]] -->C(Transposon Annotation)
-	C --> D[[a3_anno_combine]]
-	D --> E[[a4_anno_parse]]
-	E --> G[[a5_anno_pipeline]]
-	G --> H[[a6_anno_stats]]
-	G --> I[[a7_size_filter]]
-	I --> J[[a8_make_pictures]]
+	F[[a1_TEUlt_setup]] --> A;
+	F[[a1_TEUlt_setup]] --> B;
+	A[[a2_1_anno_TEUlt]] -->C(Transposon Annotation);
+	B[[a2_2_anno_manual]] -->C(Transposon Annotation);
+	C --> D[[a3_anno_combine]];
+	D --> E[[a4_anno_parse]];
+	E --> G[[a5_anno_pipeline]];
+	G --> H[[a6_anno_stats]];
+	G --> I[[a7_size_filter]];
+	I --> J[[a8_make_pictures]];
 
 
 class A,B,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z internal-link;
