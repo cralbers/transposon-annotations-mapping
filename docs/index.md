@@ -1,5 +1,4 @@
 # Transposon Annotations and Mapping Process
-%%This is the only way I could figure out how to publish this Obsidian vault with all of the transposon annotation and mapping workflow information in a way that is actually helpful to others.%%
 
 This website is just my notes and process for generating transposon annotations and then tracking their movement during SPUR 2022 (Summer 2022). There are 2 main parts:
 
