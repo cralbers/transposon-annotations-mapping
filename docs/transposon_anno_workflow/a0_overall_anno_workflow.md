@@ -13,7 +13,7 @@ major steps of the transposon annotation and tracking workflow i used because my
 - other random changes to source code -> [[other_source_changes]]
 
 
-```mermaid 
+``` mermaid 
 graph TD
 	F[[a1_TEUlt_setup]] --> A
 	F[[a1_TEUlt_setup]] --> B
