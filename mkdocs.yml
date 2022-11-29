@@ -77,6 +77,7 @@ extra_javascript:
 
 nav:
   - Transposon Annotations:
+    - transposon_anno_workflow/index.md
     - Overall Workflow: transposon_anno_workflow/a0_overall_anno_workflow.md
     - Step 1 - TEUlt setup: transposon_anno_workflow/a1_TEUlt_setup.md
     - Step 2.1 - TEUlt annotations: transposon_anno_workflow/a2_1_anno_TEUlt.md
