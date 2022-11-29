@@ -1,6 +1,6 @@
 # step 4 of [[m0_overall_mapping_workflow|overall mapping workflow]]
-> [!previous step]
-> [[m3_findactuallymoved]]
+!!! info "previous step:"
+    [[m3_findactuallymoved]]
 
 
 **link to RIdeogram documentation:**
