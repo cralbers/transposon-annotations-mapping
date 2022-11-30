@@ -2,8 +2,8 @@
 aliases: [LTR Retriever]
 ---
 # LTR Retriever
-* ==paper link==: (https://academic.oup.com/plphys/article/176/2/1410/6117145?login=true)
-* ==program download link==: (https://github.com/oushujun/LTR_retriever)
+* ==paper link==: [(https://academic.oup.com/plphys/article/176/2/1410/6117145?login=true)]
+* ==program download link==: [(https://github.com/oushujun/LTR_retriever)]
 * conda download! very easy to follow installation directions on github
 * inputs:
     * genome (in fasta format) 

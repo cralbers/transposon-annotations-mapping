@@ -2,9 +2,9 @@
 aliases: [LTR Harvest]
 ---
 ## LTR Harvest
-- ==LTR Harvest documentation:== (http://genometools.org/tools/gt_ltrharvest.html)
+- ==LTR Harvest documentation:== [(http://genometools.org/tools/gt_ltrharvest.html)]
 - run locally through genometools package
-	- ==genometools link==: (http://genometools.org/index.html)
+	- ==genometools link==: [(http://genometools.org/index.html)]
 	```bash
 	# install genome tools 
 	conda install -c bioconda genometools
@@ -14,7 +14,7 @@ aliases: [LTR Harvest]
 
 
 ## running LTR Harvest locally
-- commands copied from (https://github.com/oushujun/LTR_retriever#inputs)
+- commands copied from [(https://github.com/oushujun/LTR_retriever#inputs)]
 1. run gt suffixerator to create necessary indices
 ```bash
 gt suffixerator -db sequence.fasta -indexname sequence.fasta.index -tis -suf -lcp -des -ssp -sds -dna
