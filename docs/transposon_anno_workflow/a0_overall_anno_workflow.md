@@ -3,7 +3,7 @@ aliases: [overall annotation workflow]
 ---
 # ANNOTATIONS
 ---
-these notes are located at [(https://cralbers.github.io/transposon-annotations-mapping/)]
+these notes are located at [](https://cralbers.github.io/transposon-annotations-mapping/)
 
 ## annotation workflow
 major steps of the transposon annotation and tracking workflow i used because my file organization is absolutely horrific and I want to learn how to use this obsidian program and also apparently i am accountable for what i did lol.
