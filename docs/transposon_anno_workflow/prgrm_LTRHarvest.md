@@ -16,8 +16,9 @@ aliases: [LTR Harvest]
 ## running LTR Harvest locally
 - commands copied from [https://github.com/oushujun/LTR_retriever#inputs](https://github.com/oushujun/LTR_retriever#inputs)
 1. run gt suffixerator to create necessary indices
+	- [Suffixerator documentation](https://manpages.ubuntu.com/manpages/trusty/man1/gt-suffixerator.1.html)
 ```bash
-gt suffixerator -db sequence.fasta -indexname sequence.fasta.index -tis -suf -lcp -des -ssp -sds -dna
+gt suffixerator -db sequence.fasta -indexname sequence.fasta -tis -suf -lcp -des -ssp -sds -dna
 ```
 
 2. run gt ltrharvest to get ltr annotations in format needed for [[prgrm_LTRHarvest|LTR Harvest]]
@@ -25,4 +26,5 @@ gt suffixerator -db sequence.fasta -indexname sequence.fasta.index -tis -suf -lc
 gt ltrharvest -index sequence.fasta.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -motif TGCA -motifmis 1 -similar 85 -vic 10 -seed 20 -seqids yes > sequence.fa.harvest.scn
 ```
 
-
+## LTRharvest options table 
+![[Screenshot 2022-11-30 at 2.36.29 PM.png]]
