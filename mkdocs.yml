@@ -79,6 +79,7 @@ extra_javascript:
 
 
 nav:
+  - Home: index.md
   - Transposon Annotations:
     - transposon_anno_workflow/index.md
     - Overall Workflow: transposon_anno_workflow/a0_overall_anno_workflow.md
