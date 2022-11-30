@@ -2,7 +2,7 @@
 aliases: [SINE Finder]
 ---
 # SINE Finder
-* ==paper link==: https://academic.oup.com/plcell/article/23/9/3117/6097673
+* ==paper link==: (https://academic.oup.com/plcell/article/23/9/3117/6097673)
 * the program is located in the supplemental material of the paper (the alternate download link listed (german website) doesn't work, but you can try :))
     * kind of tricky to find: 
     1. download the supp material
