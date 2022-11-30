@@ -12,5 +12,3 @@ and each of these pages have subpages that outline the general steps I took for 
   ![Kevin](kevin.png){ width="300" }
   <figcaption>also thx kevin</figcaption>
 </figure>
-
-![[kevin.png]]
