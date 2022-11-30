@@ -3,7 +3,7 @@ aliases: [overall annotation workflow]
 ---
 # ANNOTATIONS
 ---
-these notes are located at [](https://cralbers.github.io/transposon-annotations-mapping/)
+these notes are located at [Transposon Annotations and Mapping](https://cralbers.github.io/transposon-annotations-mapping/)
 
 ## annotation workflow
 major steps of the transposon annotation and tracking workflow i used because my file organization is absolutely horrific and I want to learn how to use this obsidian program and also apparently i am accountable for what i did lol.
@@ -12,7 +12,7 @@ major steps of the transposon annotation and tracking workflow i used because my
 - changes to integrate LTR Retriever -> [[LTRRet_integration]]
 - other random changes to source code -> [[other_source_changes]]
 
-## 
+## diagram
 ``` mermaid 
 graph TD
 	F(TEUlt setup) --> A;
@@ -27,7 +27,6 @@ graph TD
 	I --> J(Visualize);
 
 ```
-
 
 
 

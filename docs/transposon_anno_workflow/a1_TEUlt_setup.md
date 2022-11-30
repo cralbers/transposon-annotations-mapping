@@ -5,7 +5,7 @@ aliases: [step 1]
 **how to set up Transposon Ultimate yay**
 
 ## Transposon Ultimate annotations
-- github link for reasonaTE: [(https://github.com/DerKevinRiehl/transposon_annotation_reasonaTE)]
+- [github link for reasonaTE](https://github.com/DerKevinRiehl/transposon_annotation_reasonaTE)
 
 ### in & out
 <table cellpadding="5" style="border: 1px solid black">
