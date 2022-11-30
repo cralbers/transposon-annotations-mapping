@@ -20,3 +20,5 @@ aliases: [step 2.2]
 - [ ] [[prgrm_SINEFind|SINE Finder]]
 
 - [ ] [[prgrm_LTRHarvest|LTR Harvest]]
+
+- [ ] [[prgrm_LTRFinder|LTR Finder]]

@@ -65,6 +65,8 @@ plugins:
   - mermaid2:
         arguments:
           securityLevel: 'loose'
+  - privacy:
+      external_links: true
 
 
       
