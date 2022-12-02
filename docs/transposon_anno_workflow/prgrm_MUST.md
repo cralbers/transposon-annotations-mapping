@@ -28,11 +28,17 @@ aliases: [MUST]
 ```bash
 ./MUST_Pipe.pl <genome.fasta> <result.txt> <temp> [OPTIONS]
 ```
+- run on Talapas, this will take a couple hours so best to not run locally
 
 - need to run from directory that came from unzipping the MUST.tar.gz file where the MUST_Pipe.pl script is located
 - if you name the output file result.txt when you run MUST, won't have to rename the file later for integration into TEUlt ([[a3_anno_combine]])
 - temp is the temporary directory in which intermediary files will be stored as MUST is running, this directory needs to be initialized prior to running MUST and located within directory that holds MUST_Pipe.pl script
 - CLI syntax and options (copied over from [https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en](https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en)
+
+
+| ![[MUST_CLI.png.png]] |
+|:--:|
+| <b>MUST CLI syntax and options</b>|
 
 ![[MUST_CLI.png.png]]
 

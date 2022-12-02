@@ -18,12 +18,12 @@ aliases: [LTR Harvest]
 1. run gt suffixerator to create necessary indices
 	- [Suffixerator documentation](https://manpages.ubuntu.com/manpages/trusty/man1/gt-suffixerator.1.html)
 ```bash
-gt suffixerator -db sequence.fasta -indexname sequence.fasta -tis -suf -lcp -des -ssp -sds -dna
+gt suffixerator -db kimcb.fasta -indexname kimcb.index -tis -suf -lcp -des -ssp -sds -dna
 ```
 
 2. run gt ltrharvest to get ltr annotations in format needed for [[prgrm_LTRHarvest|LTR Harvest]]
 ```bash
-gt ltrharvest -index sequence.fasta.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -motif TGCA -motifmis 1 -similar 85 -vic 10 -seed 20 -seqids yes > sequence.fa.harvest.scn
+gt ltrharvest -index kimcb.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -motif TGCA -motifmis 1 -similar 85 -vic 10 -seed 20 -seqids yes -v > kimcb.harvest.scn
 ```
 
 ## LTRharvest options table 

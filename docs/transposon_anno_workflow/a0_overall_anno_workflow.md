@@ -3,7 +3,6 @@ aliases: [overall annotation workflow]
 ---
 # ANNOTATIONS
 ---
-these notes are located at [Transposon Annotations and Mapping](https://cralbers.github.io/transposon-annotations-mapping/)
 
 ## annotation workflow
 major steps of the transposon annotation and tracking workflow i used because my file organization is absolutely horrific and I want to learn how to use this obsidian program and also apparently i am accountable for what i did lol.
@@ -41,3 +40,12 @@ graph TD
 6. [[a6_anno_stats]] (get stats on the ==non-size filtered data== that was output by TEUlt)
 7. [[a7_size_filter]] (filter out massive TEs that were annotated but no possible way they are actual TEs)
 8. [[a8_make_pictures]] (make some graphs of the data and other data exploration fxns)
+
+
+## important files
+- [[LTRRet_integration.md]]
+- [[MUST_Pipe.md]]
+- [[other_source_changes.md]]
+- [[TEUlt_reasonaTE_sizefilter.py]]
+- [[TEUlt_reasonaTE_sizefilter.ipynb]]
+- [[TEUlt_reasonaTE_graphs.ipynb]]
