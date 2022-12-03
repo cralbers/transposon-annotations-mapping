@@ -33,7 +33,7 @@ aliases: [SINE Finder]
     ```
 2. run command in python command line
    ```python
-   sine_finder -T "chunkwise" -V -f both sequence.fasta > kim_sinefinder.out
+   python2.7 sine_finder.py -T "chunkwise" -V -f both sequence.fasta > kim_sinefinder.out
    ```
 
 
