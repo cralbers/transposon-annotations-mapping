@@ -22,3 +22,13 @@ aliases: [step 2.2]
 - [ ] [[prgrm_LTRHarvest|LTR Harvest]]
 
 - [ ] [[prgrm_LTRFinder|LTR Finder]]
+
+## approximate runtimes 
+| program | time | computer |
+| ---- | ---- |---- |
+| MUST | ~100 min | Talapas |
+| LTR Finder parallel | ~5 min | Talapas |
+| LTR Harvest | ~90 min | local |
+| LTR Retriever | ? | Talapas |
+|SINE Finder | ? | ? |
+

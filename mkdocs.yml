@@ -98,7 +98,10 @@ nav:
     - Step 2 - Jupyter notebook party: transposon_mapping_workflow/m2_jupyterparty.md
     - Step 3 - Find TEs that actually moved: transposon_mapping_workflow/m3_findactuallymoved.md
     - Step 4 - RIdeogram: transposon_mapping_workflow/m4_rideogram.md
-  - Scripts:
+  - Code:
+    - scripts/index.md
     - Source code changes:
       - transposon_anno_workflow/LTRRet_integration.md
       - transposon_anno_workflow/other_source_changes.md
+    - Example Talapas scripts:
+      - transposon_anno_workflow/kim_must_talapas.sh

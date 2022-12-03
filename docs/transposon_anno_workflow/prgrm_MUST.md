@@ -22,13 +22,15 @@ aliases: [MUST]
 - BioPerl
 
 ## running MUST 
+- run on Talapas, this will take a couple hours so best to not run locally
+  - example script for running on Talapas in code folder [[kim_must_talapas.sh]]
 - MUST is completely command line (no GUI)
 - use the perl script in [[MUST_Pipe|MUST perl script]] and run in shell using some form of the command below:
 
 ```bash
 ./MUST_Pipe.pl <genome.fasta> <result.txt> <temp> [OPTIONS]
 ```
-- run on Talapas, this will take a couple hours so best to not run locally
+
 
 - need to run from directory that came from unzipping the MUST.tar.gz file where the MUST_Pipe.pl script is located
 - if you name the output file result.txt when you run MUST, won't have to rename the file later for integration into TEUlt ([[a3_anno_combine]])
@@ -40,5 +42,4 @@ aliases: [MUST]
 |:--:|
 | <b>MUST CLI syntax and options</b>|
 
-![[MUST_CLI.png.png]]
 

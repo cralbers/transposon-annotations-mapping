@@ -16,5 +16,10 @@ aliases: [LTR Retriever]
 - HMMER
 - RepeatMasker
 
-#### getting LTR RT candidates
-- sufficient to use only results from LTR Finder and LTR Harvest [[prgrm_LTRHarvest|LTR Harvest]] (also the output files from these two LTR RT candidate finders do not have to be altered for input into LTR Retriever!)
+## getting LTR RT candidates
+1. sufficient to use only results from [[prgrm_LTRFinder|LTR Finder]] and [[prgrm_LTRHarvest|LTR Harvest]] (also the output files from these two LTR RT candidate finders do not have to be altered for input into LTR Retriever!)
+2. then use this command to combine LTR Finder and LTR Harvest annotations
+	```bash
+	cat sequence.fa.harvest.scn sequence.fasta.finder.combine.scn > sequence.fa.rawLTR.scn
+	```
+

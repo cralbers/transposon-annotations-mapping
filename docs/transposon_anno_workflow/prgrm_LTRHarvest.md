@@ -21,9 +21,13 @@ aliases: [LTR Harvest]
 gt suffixerator -db kimcb.fasta -indexname kimcb.index -tis -suf -lcp -des -ssp -sds -dna
 ```
 
-2. run gt ltrharvest to get ltr annotations in format needed for [[prgrm_LTRHarvest|LTR Harvest]]
+2. run gt ltrharvest to get ltr annotations in format needed for [[prgrm_LTRRet|LTR Retriever]]
 ```bash
 gt ltrharvest -index kimcb.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -motif TGCA -motifmis 1 -similar 85 -vic 10 -seed 20 -seqids yes -v > kimcb.harvest.scn
+```
+3. run gt ltrharvest to get non TGCA motif LTRs
+```bash
+gt ltrharvest -index kimcb.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -similar 85 -vic 10 -seed 20 -seqids yes -v > kimcb.harvest.nonTGCA.scn
 ```
 
 ## LTRharvest options table 

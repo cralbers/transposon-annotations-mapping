@@ -8,7 +8,8 @@ This website is just my notes and process for generating transposon annotations 
 and each of these pages have subpages that outline the general steps I took for each portion of this process! Hopefully this makes sense to somebody other than me :) let me know if you need any information from me- I will continue to update this site as I think of more information and steps that need explaining
 
 
-<figure markdown>
-  ![Kevin](kevin.png){ width="300" }
-  <figcaption>also thx kevin</figcaption>
-</figure>
+
+  | ![Kevin](kevin.png) |
+  |:--:|
+  | <b>also thx kevin</b> |
+
