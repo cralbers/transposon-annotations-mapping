@@ -77,8 +77,7 @@ extra_javascript:
 
 nav:
     - Home: index.md
-    - Transposon Annotations:
-      - transposon_anno_workflow/index.md
+    - Transposon Annotations: transposon_anno_workflow/a0_overall_anno_workflow.md
       - Overall Workflow: transposon_anno_workflow/a0_overall_anno_workflow.md
       - Step 1 - TEUlt setup: transposon_anno_workflow/a1_TEUlt_setup.md
       - Step 2.1 - TEUlt annotations: transposon_anno_workflow/a2_1_anno_TEUlt.md
@@ -90,7 +89,6 @@ nav:
       - Step 7 - Size filtering: transposon_anno_workflow/a7_size_filter.md
       - Step 8 - Analysis and graphs: transposon_anno_workflow/a8_make_pictures.md
     - Transposon Mapping:
-      - transposon_mapping_workflow/index.md
       - Overall Workflow: transposon_mapping_workflow/m0_overall_mapping_workflow.md
       - Step 1 - Determine overlap: transposon_mapping_workflow/m1_bedtools_intersect.md
       - Step 2 - Jupyter notebook party: transposon_mapping_workflow/m2_jupyterparty.md

@@ -1,11 +1,11 @@
 # code crypt
 
-## TE Ult source code changes:
+## TE Ult source code changes
 - LTR Retriever integration into TEUlt: [[LTRRet_integration.md]]
 - Other random TEUlt source code changes: [[other_source_changes.md]]
 
 
-## Example Talapas scripts:
+## Example Talapas scripts
 - MUST: [[kim_must_talapas.sh]]
 - LTR Finder parallel: [[kim_ltrfinder_parallel_talapas.sh]]
 
