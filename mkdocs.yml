@@ -65,6 +65,7 @@ plugins:
   - mermaid2:
         arguments:
           securityLevel: 'loose'
+  - awesome-pages
   
 
 
@@ -77,27 +78,4 @@ extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
 
 
-nav:
-  - Home: index.md
-  - Transposon Annotations:
-    - transposon_anno_workflow/index.md
-    - Overall Workflow: transposon_anno_workflow/a0_overall_anno_workflow.md
-    - Step 1 - TEUlt setup: transposon_anno_workflow/a1_TEUlt_setup.md
-    - Step 2.1 - TEUlt annotations: transposon_anno_workflow/a2_1_anno_TEUlt.md
-    - Step 2.2 - Manual annotations: transposon_anno_workflow/a2_2_anno_manual.md
-    - Step 3 - Combine annotations: transposon_anno_workflow/a3_anno_combine.md
-    - Step 4 - Parse annotations: transposon_anno_workflow/a4_anno_parse.md
-    - Step 5 - Run TEUlt pipeline: transposon_anno_workflow/a5_anno_pipeline.md
-    - Step 6 - Annotation stats (NOT size filtered): transposon_anno_workflow/a6_anno_stats.md
-    - Step 7 - Size filtering: transposon_anno_workflow/a7_size_filter.md
-    - Step 8 - Analysis and graphs: transposon_anno_workflow/a8_make_pictures.md
-  - Transposon Mapping:
-    - transposon_mapping_workflow/index.md
-    - Overall Workflow: transposon_mapping_workflow/m0_overall_mapping_workflow.md
-    - Step 1 - Determine overlap: transposon_mapping_workflow/m1_bedtools_intersect.md
-    - Step 2 - Jupyter notebook party: transposon_mapping_workflow/m2_jupyterparty.md
-    - Step 3 - Find TEs that actually moved: transposon_mapping_workflow/m3_findactuallymoved.md
-    - Step 4 - RIdeogram: transposon_mapping_workflow/m4_rideogram.md
-  - Code:
-    - scripts/index.md
-    
+
