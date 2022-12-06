@@ -14,16 +14,16 @@ major steps of the transposon annotation and tracking workflow i used because my
 ## diagram
 ``` mermaid 
 graph TD
-	F(TEUlt setup) --> A;
-	F(TEUlt setup) --> B;
-	A(TEUlt annotations) -->C(Transposon Annotation);
-	B(Manual Annotations) -->C(Transposon Annotation);
-	C --> D(Combine Annotations);
-	D --> E(Parse Annotations);
-	E --> G(Run TEUlt Pipeline);
-	G --> H(Annotation Stats);
-	G --> I(Size Filtering);
-	I --> J(Visualize);
+	F(1. TEUlt setup) --> A;
+	F(1. TEUlt setup) --> B;
+	A(2.1. TEUlt annotations) -->C(Transposon Annotation);
+	B(2.2. Manual Annotations) -->C(Transposon Annotation);
+	C --> D(3. Combine Annotations);
+	D --> E(4. Parse Annotations);
+	E --> G(5. Run TEUlt Pipeline);
+	G --> H(6. Annotation Stats);
+	G --> I(7. Size Filtering);
+	I --> J(8. Visualize);
 
 ```
 
