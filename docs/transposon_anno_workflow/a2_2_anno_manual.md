@@ -11,7 +11,7 @@ aliases: [step 2.2]
 	- these local annotations should be run with the sequence.fasta file that was generated during the TEUlt setup process ([[a1_TEUlt_setup|step 1]]) to ensure that the chromosome naming is the same across all files
 	- if the chromosome naming is inconsistent, the TEUlt pipeline ([[a5_anno_pipeline|step 5]]) will not run correctly
 
-## local/manual annotations
+## Local/manual annotations
 
 - [ ] [[prgrm_MUST|MUST]]
 
@@ -23,7 +23,7 @@ aliases: [step 2.2]
 
 - [ ] [[prgrm_LTRFinder|LTR Finder]]
 
-## approximate runtimes 
+## Approximate runtimes 
 | program | time | computer |
 | ---- | ---- |---- |
 | MUST | ~100 min | Talapas |

@@ -11,7 +11,7 @@ aliases: [MUST]
 - this program is a hellhole of perl scripts so sorry
 
 
-## dependencies
+## Dependencies
 - NCBI BLAST version 2.2.11 (version used for publication)
 - BLAT version 3.5 (version used for publication)
 - "open-3.3.0” version of RepeatMasker with the revision 1.250 (version used for publication)
@@ -21,7 +21,7 @@ aliases: [MUST]
     - Bash
 - BioPerl
 
-## running MUST 
+## Running MUST 
 - run on Talapas, this will take a couple hours so best to not run locally
   - example script for running on Talapas in code folder [[kim_must_talapas.sh]]
 - MUST is completely command line (no GUI)

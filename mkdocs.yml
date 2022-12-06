@@ -104,4 +104,13 @@ nav:
       - transposon_anno_workflow/LTRRet_integration.md
       - transposon_anno_workflow/other_source_changes.md
     - Example Talapas scripts:
-      - transposon_anno_workflow/kim_must_talapas.sh
+      - scripts/kim_must_talapas.sh
+      - scripts/kim_ltrfinder_parallel_talapas.sh
+    - Programs:
+      - scripts/sine_finder.py
+      - scripts/MUST_Pipe.pl
+    - Jupyter notebooks:
+      - scripts/TEUlt_reasonaTE_graphs.ipynb
+      - scripts/TEUlt_reasonaTE_sizefilter.ipynb
+      - scripts/TEUlt_find_unique_TEs_7.ipynb
+

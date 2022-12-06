@@ -9,7 +9,7 @@ aliases: [LTR Retriever]
     * genome (in fasta format) 
     * LTR RT candidates (from any combination of LTR Finder, LTRHarvest, LTR_STRUC, MGEScan 3.0.0, and LtrDetector)
 
-## dependencies
+## Dependencies
 - TRF 
 - BLAST+ 
 - BLAST or CD-HIT

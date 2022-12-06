@@ -1,7 +1,7 @@
 ---
 aliases: [LTR Harvest]
 ---
-## LTR Harvest
+# LTR Harvest
 - [LTR Harvest documentation](http://genometools.org/tools/gt_ltrharvest.html)
 - run locally through genometools package
 	- [GenomeTools](http://genometools.org/index.html)
@@ -12,8 +12,10 @@ aliases: [LTR Harvest]
 - use genome file that was made during TEUlt setup (have to download from Talapas)
 	- have to do this so that all of the chromosome names are the same between the TEUlt annotations and the annotations run locally
 
+## Dependencies
+- genometools (conda package)
 
-## running LTR Harvest locally
+## Running LTR Harvest 
 - commands copied from [https://github.com/oushujun/LTR_retriever#inputs](https://github.com/oushujun/LTR_retriever#inputs)
 1. run gt suffixerator to create necessary indices
 	- [Suffixerator documentation](https://manpages.ubuntu.com/manpages/trusty/man1/gt-suffixerator.1.html)

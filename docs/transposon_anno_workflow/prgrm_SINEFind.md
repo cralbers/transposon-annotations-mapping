@@ -13,10 +13,10 @@ aliases: [SINE Finder]
 * outputs:
     * SINE sequences in fasta format
 
-## dependencies 
-* Python (minimum v2.5)
+## Dependencies 
+* Python 2.7
 
-## important notes
+## Important notes
 * ==NEED TO RUN CHUNK-WISE== ```
 { .annotate }
 1. hey, did you run this chunk-wise?
@@ -24,14 +24,15 @@ aliases: [SINE Finder]
     * USE EXTENSION: $ -T 'chunkwise'
 * need to run with both sequence.fasta and sequence_rc.fasta because SINE finder only annotates a single strand 
 
-## running SINE Finder
+## Running SINE Finder
 - run in Talapas
+- specifically works with python2.7 (not later versions- does some whack stuff and tries to run interactively but then immediately crashes out before any arguments are passed to the prompts, so long story short, have to specify v2.7)
 
-1. start python command line from directory that has sequence.fasta, sequence_rc.fasta and sine_finder.py
+1. go to directory that has sequence.fasta, sequence_rc.fasta and sine_finder.py
     ```bash
-    python
+    cd sine/finder/directory
     ```
-2. run command in python command line
+2. run command using python2.7
    ```python
    python2.7 sine_finder.py -T "chunkwise" -V -f both sequence.fasta > kim_sinefinder.out
    ```
