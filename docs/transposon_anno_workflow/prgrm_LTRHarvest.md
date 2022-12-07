@@ -7,13 +7,15 @@ aliases: [LTR Harvest]
 	- [GenomeTools](http://genometools.org/index.html)
 	```bash
 	# install genome tools 
-	conda install -c bioconda genometools
+	conda install -n envname genometools-genometools
 	```
 - use genome file that was made during TEUlt setup (have to download from Talapas)
 	- have to do this so that all of the chromosome names are the same between the TEUlt annotations and the annotations run locally
 
 ## Dependencies
 - genometools (conda package)
+  - [genometools documentation](https://bioconda.github.io/recipes/genometools-genometools/README.html)
+  - [how to install genometools](https://bioinformatics.stackexchange.com/questions/6873/how-to-install-genometools-with-anaconda)
 
 ## Running LTR Harvest 
 - commands copied from [https://github.com/oushujun/LTR_retriever#inputs](https://github.com/oushujun/LTR_retriever#inputs)
