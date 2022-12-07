@@ -81,7 +81,8 @@ nav:
       - Overall Workflow: transposon_anno_workflow/a0_overall_anno_workflow.md
       - Step 1 - TEUlt setup: transposon_anno_workflow/a1_TEUlt_setup.md
       - Step 2.1 - TEUlt annotations: transposon_anno_workflow/a2_1_anno_TEUlt.md
-      - Step 2.2 - Manual annotations: transposon_anno_workflow/a2_2_anno_manual.md
+      - Step 2.2 - Manual annotations: 
+        - transposon_anno_workflow/a2_2_anno_manual.md
         - MUST: transposon_anno_workflow/prgrm_MUST.md
         - SINE Finder: transposon_anno_workflow/prgrm_SINEFind.md
         - LTR Harvest: transposon_anno_workflow/prgrm_LTRHarvest.md
