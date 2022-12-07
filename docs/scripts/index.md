@@ -1,3 +1,7 @@
+---
+aliases: [code]
+---
+
 # code crypt
 
 ## TE Ult source code changes

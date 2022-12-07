@@ -1,13 +1,13 @@
 ---
 aliases: [step 1]
 ---
-# step 1 of [[a0_overall_anno_workflow|overall annotation workflow]]
+# Step 1 of [[a0_overall_anno_workflow|overall annotation workflow]]
 **how to set up Transposon Ultimate yay**
 
 ## Transposon Ultimate annotations
 - [github link for reasonaTE](https://github.com/DerKevinRiehl/transposon_annotation_reasonaTE)
 
-### in & out
+### In & Out
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
         <td style="border: 1px solid black" >INPUT</td>
@@ -19,18 +19,18 @@ aliases: [step 1]
     </tr>
 </table>
 
-### dependencies
+### Dependencies
 - Repeat masker
 - repeat modeler
 - conda
 - python
 
-### install reasonaTE conda environment and necessary packages
+### Install reasonaTE conda environment and necessary packages
 1. this could take some trial and error- I didn't have any luck using mamba to install any of the conda packages, and eventually ended up using a janky combination of the .yml environment files and conda commands
 2. I would suggest just trying the .yml initially, rather than messing with the individual conda/mamba installations but do whatever
 3. in the end, you just need to end up with 2 different environments- call them what you will, but they are referred to in the reasonaTE docs as **transposon_annotation_tools_env** and **transposon_annotation_reasonaTE** so that's what I used for simplicity's sake
 
-### create project workspace on Talapas with input genome
+### Create project workspace on Talapas with input genome
 
 1. run these commands on Talapas to load in the correct modules and make some folders that will hold everything for the transposon ultimate run on this genome
 ```python
