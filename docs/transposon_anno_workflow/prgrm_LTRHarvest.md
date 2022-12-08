@@ -3,9 +3,16 @@ aliases: [LTR Harvest]
 ---
 # LTR Harvest
 - [LTR Harvest documentation](http://genometools.org/tools/gt_ltrharvest.html)
-- run locally through genometools package
+- run locally through genometools package in specific conda env
 	- [GenomeTools](http://genometools.org/index.html)
 	```bash
+	# create conda environment
+	conda create --name envname
+	# add conda channels
+	conda config --add channels defaults
+	conda config --add channels bioconda
+	conda config --add channels conda-forge
+	conda config --set channel_priority strict
 	# install genome tools 
 	conda install -n envname genometools-genometools
 	```
@@ -22,7 +29,7 @@ aliases: [LTR Harvest]
 1. run gt suffixerator to create necessary indices
 	- [Suffixerator documentation](https://manpages.ubuntu.com/manpages/trusty/man1/gt-suffixerator.1.html)
 ```bash
-gt suffixerator -db kimcb.fasta -indexname kimcb.index -tis -suf -lcp -des -ssp -sds -dna
+gt suffixerator -db sequence.fasta -indexname kimcb.index -tis -suf -lcp -des -ssp -sds -dna
 ```
 
 2. run gt ltrharvest to get ltr annotations in format needed for [[prgrm_LTRRet|LTR Retriever]]
