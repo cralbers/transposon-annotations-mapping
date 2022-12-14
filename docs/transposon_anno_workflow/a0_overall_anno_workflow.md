@@ -41,11 +41,13 @@ graph TD
 7. [[a7_size_filter]] (filter out massive TEs that were annotated but no possible way they are actual TEs)
 8. [[a8_make_pictures]] (make some graphs of the data and other data exploration fxns)
 
+## approximate runtimes 
 
-## important files
-- [[LTRRet_integration.md]]
-- [[MUST_Pipe]]
-- [[other_source_changes.md]]
-- [[TEUlt_reasonaTE_sizefilter.py]]
-- [[TEUlt_reasonaTE_sizefilter.ipynb]]
-- [[TEUlt_reasonaTE_graphs.ipynb]]
+| step | time | computer |
+| ---- | ---- |---- |
+| 2.1 | ~27 hours | Talapas |
+| 2.2 | [[a2_2_anno_manual#Approximate runtimes]] | Talapas |
+| 4 | ? | Talapas |
+| 5 | ? | Talapas |
+
+

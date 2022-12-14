@@ -16,8 +16,22 @@ aliases: [LTR Harvest]
 	# install genome tools 
 	conda install -n envname genometools-genometools
 	```
-- use genome file that was made during TEUlt setup (have to download from Talapas)
-	- have to do this so that all of the chromosome names are the same between the TEUlt annotations and the annotations run locally
+
+## In & Out
+
+<table cellpadding="5" style="border: 1px solid black">
+    <tr style="border: 1px solid black">
+        <td style="border: 1px solid black" >INPUT</td>
+        <td style="border: 1px solid black">genome in fasta format</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black">OUTPUT</td>
+        <td style="border: 1px solid black">uncleaned/unfiltered LTR annotations to input into LTR Retriever</td>
+    </tr>
+</table>
+
+- **use genome file that was made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILE OUT OF THE TE ULT DIRECTORY**)
+
 
 ## Dependencies
 - genometools (conda package)
@@ -36,10 +50,11 @@ gt suffixerator -db sequence.fasta -indexname kimcb.index -tis -suf -lcp -des -s
 ```bash
 gt ltrharvest -index kimcb.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -motif TGCA -motifmis 1 -similar 85 -vic 10 -seed 20 -seqids yes -v > kimcb.harvest.scn
 ```
+
 3. run gt ltrharvest to get non TGCA motif LTRs
 ```bash
 gt ltrharvest -index kimcb.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -similar 85 -vic 10 -seed 20 -seqids yes -v > kimcb.harvest.nonTGCA.scn
 ```
 
-## LTRharvest options table 
+### command line syntax
 ![[Screenshot 2022-11-30 at 2.36.29 PM.png]]

@@ -8,10 +8,20 @@ aliases: [SINE Finder]
     1. download the supp material
     2. actual python script is Supp Data File 1 (txt file)
     3. make a copy or resave this .txt file as a .py file (change file extension) so that it will be recognized as a python script
-* inputs:
-    * genome in fasta format (accepts .fas, .FASTA, and .mfa file extensions)
-* outputs:
-    * SINE sequences in fasta format
+
+## In & Out
+*<table cellpadding="5" style="border: 1px solid black">
+    <tr style="border: 1px solid black">
+        <td style="border: 1px solid black" >INPUT</td>
+        <td style="border: 1px solid black">genome in fasta format (accepts .fas, .FASTA, and .mfa file extensions)</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black">OUTPUT</td>
+        <td style="border: 1px solid black">SINE sequences in fasta format</td>
+    </tr>
+</table>
+
+- **use genome file that was made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILE OUT OF THE TE ULT DIRECTORY**)
 
 ## Dependencies 
 * Python 2.7
@@ -23,10 +33,11 @@ aliases: [SINE Finder]
  * this is why this program must be run manually- when run through the conda wrapper in Transposon Ultimate, the python recursive memory limit is exceeded for large genomes because the conda wrapper runs SINE Finder in seqwise mode, resulting in the program stopping when the memory limit is reached and subsequently incomplete annotations
     * USE EXTENSION: $ -T 'chunkwise'
 * need to run with both sequence.fasta and sequence_rc.fasta because SINE finder only annotates a single strand 
+* **use genome files that were made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILES OUT OF THE TE ULT DIRECTORY**)
 
 ## Running SINE Finder
 - run in Talapas
-- specifically works with python2.7 (not later versions- does some whack stuff and tries to run interactively but then immediately crashes out before any arguments are passed to the prompts, so long story short, have to specify v2.7)
+- specifically works with python2.7 (not later versions- does some whack stuff and tries to run interactively but then immediately crashes out before any arguments are passed to the prompts, (which is very possibly user error on my part, but this was just the silly way i got it to work) so long story short, have to specify v2.7)
 
 1. go to directory that has sequence.fasta, sequence_rc.fasta and sine_finder.py
     ```bash
@@ -38,7 +49,7 @@ aliases: [SINE Finder]
    ```
 
 
-## SINE Finder command options
+### command line syntax
 ```
 sine_finder [options] <fastafile_name>
   OPTIONS:
