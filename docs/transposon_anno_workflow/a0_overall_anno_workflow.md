@@ -5,7 +5,7 @@ aliases: [overall annotation workflow]
 ---
 
 ## annotation workflow
-major steps of the transposon annotation and tracking workflow i used because my file organization is absolutely horrific and I want to learn how to use this obsidian program and also apparently i am accountable for what i did lol.
+These are the major steps of the transposon annotation and tracking workflow I used to generate the TE annotations and such. 
 
 - all of the individual functions that are defined within the TEUlt are explained here -> [[TEUlt_file_fxs]]
 - changes to integrate LTR Retriever -> [[LTRRet_integration]]

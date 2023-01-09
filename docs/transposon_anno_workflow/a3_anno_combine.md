@@ -14,7 +14,7 @@ program | file to get from outputs | rename to this | program info
 ------------ | ------------ | ------------ | ------------
 ltr retriever | ~.pass.list.gff3 | just needs to end with .gff3 | [[a2_2_anno_manual#LTR Retriever]]
 must | the only output file | result.txt | [[a2_2_anno_manual#MUST]]
-sinefinder | idk | sinefind.gff3 and sinefind.fasta are what have to go into the parsedAnnotations folder | [[a2_2_anno_manual#SINE Finder]]
+sinefinder | sequence-matches.fasta | sequence-matches.fasta | [[a2_2_anno_manual#SINE Finder]]
 
 
 ### check annotation imports

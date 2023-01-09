@@ -51,8 +51,3 @@ reasonaTE -mode annotate -projectFolder workspace -projectName testProject -tool
 	- this step will take a big long time to run all of these individual tools because of Repeatmasker and Repeatmodeler, so better to just submit the job and let  it run rather than making your poor computer do it locally
     - sample Talapas job script in [[index.md|code]] folder 
 
-
-
-
-
-
