@@ -5,7 +5,7 @@ This website is just my notes and process for generating transposon annotations 
 1. [[a0_overall_anno_workflow|overall annotation workflow]]
 2. [[m0_overall_mapping_workflow|overall mapping workflow]]
 
-and each of these pages have subpages that outline the general steps I took for each portion of this process! Hopefully this makes sense to somebody other than me :) 
+Each of these pages have subpages that outline the general steps I took for each portion of this process! Hopefully this makes sense to somebody other than me :) 
 
 
 

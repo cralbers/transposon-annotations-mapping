@@ -28,5 +28,10 @@ reasonaTE -mode pipeline -projectFolder workspace -projectName testProject
 - replace testProject with the name of your project
 
 ## Diagram of TEUlt pipeline 
-From Riehl et. al. [(https://academic.oup.com/nar/article/50/11/e64/6541023)]
+From Riehl et. al. [(https://academic.oup.com/nar/article/50/11/e64/6541023)] \\
 ![[TEUlt_pipeline_Riehl.png]]
+
+## TEUlt family classification codes
+From Riehl et. al. \\
+These codes are used to denote the family and subfamilies of a specific transposon sequence.
+![[transposon_anno_workflow/TEUlt_famclassification_codes.png]]
