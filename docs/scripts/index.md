@@ -11,7 +11,7 @@ aliases: [code]
 
 ## Example Talapas scripts
 ### To run Transposon Ultimate steps
-- TEUlt annotations: [[TEUlt_annotate.sh]]
+- TEUlt annotations: [[TEUlt_annotations.sh]]
 - TEUlt pipeline: [[TEUlt_pipeline.sh]]
 
 ### To run specific programs
