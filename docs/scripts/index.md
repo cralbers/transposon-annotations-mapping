@@ -10,7 +10,11 @@ aliases: [code]
 - Other random TEUlt source code changes: [[other_source_changes.md]]
 
 ## Example Talapas scripts
+### To run Transposon Ultimate steps
 - TEUlt annotations: [[TEUlt_annotate.sh]]
+- TEUlt pipeline: [[TEUlt_pipeline.sh]]
+
+### To run specific programs
 - MUST: [[kim_must_talapas.sh]]
 - LTR Finder parallel: [[kim_ltrfinder_parallel_talapas.sh]]
 - LTR Retriever: [[kim_ltrret_talapas.sh]]
