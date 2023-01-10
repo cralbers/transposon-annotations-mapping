@@ -3,9 +3,9 @@ aliases: [SINE Finder]
 ---
 # SINE Finder
 
-* [SINE Finder paper link](https://academic.oup.com/plcell/article/23/9/3117/6097673)
-* the program is located in the supplemental material of the paper (the alternate download link listed (german website) doesn't work, but you can try :))
-  * kind of tricky to find:
+- [SINE Finder paper link](https://academic.oup.com/plcell/article/23/9/3117/6097673)
+- the program is located in the supplemental material of the paper (the alternate download link listed (german website) doesn't work, but you can try :))
+  - kind of tricky to find:
     1. download the supp material
     2. actual python script is Supp Data File 1 (txt file)
     3. make a copy or resave this .txt file as a .py file (change file extension) so that it will be recognized as a python script
@@ -39,12 +39,12 @@ aliases: [SINE Finder]
    * USE EXTENSION: $ -T 'chunkwise'
 
 - need to run with both sequence.fasta and sequence_rc.fasta because SINE finder only annotates a single strand
-* **use genome files that were made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILES OUT OF THE TE ULT DIRECTORY**)
+- **use genome files that were made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILES OUT OF THE TE ULT DIRECTORY**)
 
 ## Running SINE Finder
 
 - run in Talapas
-* specifically works with python2.7 (not later versions- does some whack stuff and tries to run interactively but then immediately crashes out before any arguments are passed to the prompts, (which is very possibly user error on my part, but this was just the silly way i got it to work) so long story short, have to specify v2.7)
+- specifically works with python2.7 (not later versions- does some whack stuff and tries to run interactively but then immediately crashes out before any arguments are passed to the prompts, (which is very possibly user error on my part, but this was just the silly way i got it to work) so long story short, have to specify v2.7)
 
 1. go to directory that has sequence.fasta, sequence_rc.fasta and sine_finder.py
 

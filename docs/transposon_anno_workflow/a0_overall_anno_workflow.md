@@ -47,7 +47,7 @@ graph TD
 | ---- | ---- |---- |
 | 2.1 | ~27 hours | Talapas |
 | 2.2 | [[a2_2_anno_manual#Approximate runtimes]] | Talapas |
-| 4 | ? | Talapas |
+| 4 |  | Talapas |
 | 5 | ? | Talapas |
 
 

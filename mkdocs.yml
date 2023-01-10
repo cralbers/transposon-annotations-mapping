@@ -26,6 +26,7 @@ theme:
         - navigation.expand
         - navigation.indexes
         - navigation.sections
+        - navigation.tabs
 
 # Extensions
 markdown_extensions:
