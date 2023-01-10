@@ -6,6 +6,7 @@ aliases: [step 1]
 
 ## Transposon Ultimate annotations
 - [github link for reasonaTE](https://github.com/DerKevinRiehl/transposon_annotation_reasonaTE)
+- [TEUlt paper](https://academic.oup.com/nar/article/50/11/e64/6541023)
 
 ### In & Out
 <table cellpadding="5" style="border: 1px solid black">

@@ -26,3 +26,7 @@ reasonaTE -mode pipeline -projectFolder workspace -projectName testProject
 ```
 - replace workspace with the name of your workspace
 - replace testProject with the name of your project
+
+## Diagram of TEUlt pipeline 
+From Riehl et. al. [(https://academic.oup.com/nar/article/50/11/e64/6541023)]
+![[TEUlt_pipeline_Riehl.png]]

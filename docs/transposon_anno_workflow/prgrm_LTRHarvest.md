@@ -57,4 +57,4 @@ gt ltrharvest -index kimcb.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxts
 ```
 
 ### command line syntax
-![[Screenshot 2022-11-30 at 2.36.29 PM.png]]
+![[ltrharvest_CLI.png]]

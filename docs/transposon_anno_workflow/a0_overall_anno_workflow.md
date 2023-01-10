@@ -4,14 +4,14 @@ aliases: [overall annotation workflow]
 # ANNOTATIONS
 ---
 
-## annotation workflow
+## Annotation workflow
 These are the major steps of the transposon annotation and tracking workflow I used to generate the TE annotations and such. 
 
 - all of the individual functions that are defined within the TEUlt are explained here -> [[TEUlt_file_fxs]]
 - changes to integrate LTR Retriever -> [[LTRRet_integration]]
 - other random changes to source code -> [[other_source_changes]]
 
-## diagram
+## Diagram
 ``` mermaid 
 graph TD
 	F(1. TEUlt setup) --> A;
@@ -29,7 +29,7 @@ graph TD
 
 
 
-## individual steps
+## Individual steps
 1. [[a1_TEUlt_setup]]
 2. annotation of transposons
 	1. [[a2_1_anno_TEUlt]] (annotate genome using Transposon Ultimate)
@@ -41,13 +41,13 @@ graph TD
 7. [[a7_size_filter]] (filter out massive TEs that were annotated but no possible way they are actual TEs)
 8. [[a8_make_pictures]] (make some graphs of the data and other data exploration fxns)
 
-## approximate runtimes 
+## Approximate runtimes 
 
 | step | time | computer |
 | ---- | ---- |---- |
-| 2.1 | ~27 hours | Talapas |
-| 2.2 | [[a2_2_anno_manual#Approximate runtimes]] | Talapas |
-| 4 |  | Talapas |
-| 5 | ? | Talapas |
+| 2.1 (TEUlt annotations) | ~27 hours | Talapas |
+| 2.2 (manual annotations) | [[a2_2_anno_manual#Approximate runtimes]] | Talapas |
+| 4 (parse annotations) | <1 min | Talapas |
+| 5 (TEUlt pipeline) | ? | Talapas |
 
 
