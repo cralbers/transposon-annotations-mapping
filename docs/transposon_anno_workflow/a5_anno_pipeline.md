@@ -17,7 +17,8 @@ aliases: [step 5]
     </tr>
 </table>
 
-- now that all the annotations are in the same format, can run the TEUlt pipeline which runs duplicate filter, CDHIT, BLASTN and then the copy filter
+## Run TEUlt Pipeline
+- now that all the annotations are in the same format, can run the TEUlt pipeline which runs the duplicate filter, CDHIT, BLASTN and then the copy filter
 
 ```python
 conda activate transposon_annotation_reasonaTE
