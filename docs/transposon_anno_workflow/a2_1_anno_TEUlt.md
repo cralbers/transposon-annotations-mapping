@@ -33,7 +33,7 @@ aliases: [step 2.1]
 - NCBICDD1000
 
 ### Command to run annotations:
-- in theory, you could run each of these tools individually and locally, using your own computer's resources but that would probably take forever, so it's better to just pop this command into a slurm script and run it from Talapas
+- in theory, could run each of these tools individually and locally, using your own computer's resources but that would probably take forever, so it's better to just pop this command into a slurm script and run it from Talapas
 - running all of these tools in Talapas took ~27 hours, do with that what you will
 
 ```python

@@ -1,7 +1,7 @@
 ---
 aliases: [step 7]
 ---
-# step 7 of [[a0_overall_anno_workflow|overall annotation workflow]]
+# Step 7 of [[a0_overall_anno_workflow|overall annotation workflow]]
 !!! info "previous step:"
     [[a6_anno_stats]]
 
@@ -10,10 +10,10 @@ aliases: [step 7]
 	- [[TEUlt_reasonaTE_sizefilter.py]] (python file)
 	- [[TEUlt_reasonaTE_sizefilter.ipynb]] (jupyter notebook)
 - this is really tricky because how do you establish parameters that do not eliminate tandem repeats or nested TEs, but also get rid of ridiculous TEs?
-	- scan for tandem repeats with another program and compare to stringently eliminated TEs?
+	- scan for tandem repeats with another program and compare to TEs eliminated using stringent parameters?
 
 
-### in & out:
+## In & out:
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
         <td style="border: 1px solid black" >INPUT</td>
@@ -25,8 +25,11 @@ aliases: [step 7]
     </tr>
 </table>
 
+## Size parameters
+Two sets of size parameters- stringent and non-stringent. I decided on these based on the spreadsheet attached below, which outlines the transposon classes annotated by these programs and current research on their characteristics, including their canonical sizes.
+[[transposons.xlsx]]
 
-### stringent size parameters
+### Stringent size parameters
 - DNA:
 TE | size (bp) 
 ------------ | ------------
@@ -48,7 +51,7 @@ SINEs| 600
 ERV| 8000
 
 
-### non-stringent size parameters
+### Non-stringent size parameters
 - DNA:
 TE | size (bp) 
 ------------ | ------------

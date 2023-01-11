@@ -1,11 +1,11 @@
 ---
 aliases: [step 8]
 ---
-# step 8 of [[a0_overall_anno_workflow|overall annotation workflow]]
+# Step 8 of [[a0_overall_anno_workflow|overall annotation workflow]]
 !!! info "previous step:"
     [[a7_size_filter]]
 
-### in & out
+### In & out
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
         <td style="border: 1px solid black" >INPUT</td>
@@ -17,7 +17,7 @@ aliases: [step 8]
     </tr>
 </table>
 
-graph functions in jupyter notebook format:
+graphing functions in jupyter notebook format:
 
 ![[TEUlt_reasonaTE_graphs.ipynb]]
 

@@ -48,6 +48,6 @@ graph TD
 | 2.1 (TEUlt annotations) | ~27 hours | Talapas |
 | 2.2 (manual annotations) | [[a2_2_anno_manual#Approximate runtimes]] | Talapas |
 | 4 (parse annotations) | <1 min | Talapas |
-| 5 (TEUlt pipeline) | ? | Talapas |
+| 5 (TEUlt pipeline) | ~100 min | Talapas |
 
 

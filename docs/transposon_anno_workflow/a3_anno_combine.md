@@ -16,7 +16,7 @@ ltr retriever | ~.pass.list.gff3 | just needs to end with .gff3 | [[a2_2_anno_ma
 must | the only output file | result.txt | [[a2_2_anno_manual#MUST]]
 sinefinder | sequence-matches.fasta | sequence-matches.fasta | [[a2_2_anno_manual#SINE Finder]]
 
-### Check annotation imports
+## Check annotation imports
 in order to check that all of the files from programs you ran manually/locally were input into the TEUlt project folder correctly, can run annotation check command
 ```python
 conda activate transposon_annotation_tools_env
