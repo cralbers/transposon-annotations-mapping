@@ -1,9 +1,11 @@
 # General TE info
+
 Just a list of some random TE resources and info that I have found helpful throughout all of this.
 
 ## TE info sheet
-Info I have collected about the TE families annotated by TEUlt and all of the individual programs (sources are listed and there is a page in the excel file that has the reference associated with each number)
+
 [[transposons.xlsx]]
+Info I have collected about the TE families annotated by TEUlt and all of the individual programs (sources are listed and there is a page in the excel file that has the reference associated with each number)
 
 ## TE links
 
