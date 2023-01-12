@@ -103,5 +103,7 @@ nav:
       - Step 4 - RIdeogram: transposon_mapping_workflow/m4_rideogram.md
     - Code:
       - scripts/index.md
+    - Transposon Information:
+      - docs/transposon_info/index.md
       
 
