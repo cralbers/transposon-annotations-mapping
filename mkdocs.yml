@@ -104,6 +104,6 @@ nav:
     - Code:
       - scripts/index.md
     - Transposon Information:
-      - docs/transposon_info/index.md
+      - transposon_info/index.md
       
 
