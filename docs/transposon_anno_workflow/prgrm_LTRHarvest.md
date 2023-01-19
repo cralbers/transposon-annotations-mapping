@@ -34,12 +34,13 @@ aliases: [LTR Harvest]
 
 
 ## Dependencies
+
 - genometools (conda package)
   - [genometools documentation](https://bioconda.github.io/recipes/genometools-genometools/README.html)
   - [how to install genometools](https://bioinformatics.stackexchange.com/questions/6873/how-to-install-genometools-with-anaconda)
 
 ## Running LTR Harvest 
-- commands copied from [https://github.com/oushujun/LTR_retriever#inputs](https://github.com/oushujun/LTR_retriever#inputs)
+commands copied from [https://github.com/oushujun/LTR_retriever#inputs](https://github.com/oushujun/LTR_retriever#inputs)
 1. run gt suffixerator to create necessary indices
 	- [Suffixerator documentation](https://manpages.ubuntu.com/manpages/trusty/man1/gt-suffixerator.1.html)
 ```bash
