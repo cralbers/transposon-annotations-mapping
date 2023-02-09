@@ -12,9 +12,9 @@ aliases: [step 3]
 
 program | file to get from outputs | rename to this | program info
 ------------ | ------------ | ------------ | ------------
-ltr retriever | ~.pass.list.gff3 | just needs to end with .gff3 | [[a2_2_anno_manual#LTR Retriever]]
-must | the only output file | result.txt | [[a2_2_anno_manual#MUST]]
-sinefinder | sequence-matches.fasta | sequence-matches.fasta | [[a2_2_anno_manual#SINE Finder]]
+LTR Retriever | ~.pass.list.gff3 | just needs to end with .gff3 | [[a2_2_anno_manual#LTR Retriever]]
+MUST | the only output file | result.txt | [[a2_2_anno_manual#MUST]]
+SineFinder | sequence-matches.fasta | sequence-matches.fasta | [[a2_2_anno_manual#SINE Finder]]
 
 ## Check annotation imports
 in order to check that all of the files from programs you ran manually/locally were input into the TEUlt project folder correctly, can run annotation check command
@@ -22,4 +22,4 @@ in order to check that all of the files from programs you ran manually/locally w
 conda activate transposon_annotation_tools_env
 reasonaTE -mode checkAnnotations -projectFolder workspace -projectName testProject
 ```
-- anything that is marked as completed when this is run will be considered by the rest of the pipeline
+- anything that is marked as completed will be considered by the rest of the pipeline

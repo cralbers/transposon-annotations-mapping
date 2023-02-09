@@ -30,16 +30,19 @@ aliases: [LTR Retriever]
 
 ## getting LTR RT candidates
 1. it is sufficient to use only results from [[prgrm_LTRFinder|LTR Finder]] and [[prgrm_LTRHarvest|LTR Harvest]] (pro tip: the output files from these two LTR RT candidate finders do not have to be altered for input into LTR Retriever!)
-2. create a new directory (calling this ltrret_dir for the rest of this) (doesn't really matter where at this point) and copy over the following files:
+2. create a new directory (calling this ltrret_dir for the rest of this) (doesn't really matter where this directory is located at this point) and copy over the following files:
 	- **from LTR Harvest:** sequence.fa.harvest.scn and sequence.fa.harvest.nonTGCA.scn (if you decide to create/use this file for the non TGCA motif option in LTR Retriever)
 	- **from LTR Finder:** sequence.fasta.finder.combine.scn
 	- **genome file:** sequence.fasta
-3. use command below to combine LTR Finder and LTR Harvest annotations into one file
+3. use command below to combine LTR Finder and LTR Harvest annotations into one file \\
 	```bash
 cat sequence.fa.harvest.scn sequence.fasta.finder.combine.scn > sequence.fa.rawLTR.scn
+	``` or \\
+	``` bash
+cat sequence.fa.harvest.scn sequence.fa.harvest.nonTGCA.scn sequence.fasta.finder.combine.scn > sequence.fa.rawLTR.scn
 	```
 4. upload ltrret_dir directory to Talapas
-5. upload the LTR Retriever code folder to ltrret_dir
+5. upload the LTR Retriever code folder to ltrret_dir (or just clone the git repo into ltrret_dir)
 6. use command below to run LTR Retriever 
 	- example script for running on Talapas in code folder ([[kimltrret.sh]])
 	- need to make sure that ug has rwx permissions for the LTR_Retriever executable in the LTR Retriever code folder before submitting batch job (it won't work to just give rwx to the LTR Retriever code directory, you've gotta specify the executable directly or else it gets mad and says Permission Denied)

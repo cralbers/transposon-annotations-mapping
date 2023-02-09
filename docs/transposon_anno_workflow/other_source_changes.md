@@ -11,7 +11,7 @@ Traceback (most recent call last):
     doTransposonClustering(os.path.join(arg1,arg2,"transposonCandB"),os.path.join(arg1,arg2,"transposonCandC"),os.path.join(arg1,arg2,"sequence.fasta"))
   File "/gpfs/home/calbers/.conda/envs/transposon_annotation_reasonaTE/share/TransposonAnnotator_reasonaTE/TransposonClustering.py", line 187, in doTransposonClustering
     transpIDs.append(["transposon"+str(cluster[0]),key]) # ERROR # append the transpIDs list with 'transposon transposon# cluster#'
-IndexError: list index out of range
+IndexError: list index out of range 
 ```
 
 original (lines 184-188):
