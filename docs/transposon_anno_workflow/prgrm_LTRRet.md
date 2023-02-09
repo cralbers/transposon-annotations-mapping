@@ -48,5 +48,5 @@ cat sequence.fa.harvest.scn sequence.fasta.finder.combine.scn > sequence.fa.rawL
 	```
 
 ```bash
-/home/calbers/libudalab/kim_ltrretriever/LTR_retriever/LTR_retriever -genome sequence.fasta -inharvest genome.fa.rawLTR.scn -verbose -u .0000002808 > kim_LTR_retriever.out
+/home/calbers/libudalab/strain/LTR_retriever/LTR_retriever -genome sequence.fasta -inharvest genome.fa.rawLTR.scn -verbose -u .0000002808 > sequence_LTRRetriever.out
 ```

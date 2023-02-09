@@ -44,17 +44,17 @@ commands copied from [https://github.com/oushujun/LTR_retriever#inputs](https://
 1. run gt suffixerator to create necessary indices
 	- [Suffixerator documentation](https://manpages.ubuntu.com/manpages/trusty/man1/gt-suffixerator.1.html)
 ```bash
-gt suffixerator -db sequence.fasta -indexname kimcb.index -tis -suf -lcp -des -ssp -sds -dna
+gt suffixerator -db sequence.fasta -indexname sequence.index -tis -suf -lcp -des -ssp -sds -dna
 ```
 
 2. run gt ltrharvest to get ltr annotations in format needed for [[prgrm_LTRRet|LTR Retriever]]
 ```bash
-gt ltrharvest -index kimcb.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -motif TGCA -motifmis 1 -similar 85 -vic 10 -seed 20 -seqids yes -v > kimcb.harvest.scn
+gt ltrharvest -index sequence.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -motif TGCA -motifmis 1 -similar 85 -vic 10 -seed 20 -seqids yes -v > sequence.harvest.scn
 ```
 
 3. run gt ltrharvest to get non TGCA motif LTRs
 ```bash
-gt ltrharvest -index kimcb.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -similar 85 -vic 10 -seed 20 -seqids yes -v > kimcb.harvest.nonTGCA.scn
+gt ltrharvest -index sequence.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -similar 85 -vic 10 -seed 20 -seqids yes -v > sequence.harvest.nonTGCA.scn
 ```
 
 ### command line syntax
