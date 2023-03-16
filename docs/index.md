@@ -8,7 +8,4 @@ This website is just my notes and process for generating transposon annotations 
 Each of these pages have subpages that outline the general steps I took for each portion of this process! Hopefully this makes sense to somebody other than me :) 
 
 
-  | ![Kevin](kevin.png){ width="200" } |
-  |:--:|
-  | <b>also thx kevin</b> |
 
