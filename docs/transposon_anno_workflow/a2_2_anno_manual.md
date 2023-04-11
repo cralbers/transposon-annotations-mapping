@@ -1,12 +1,12 @@
 ---
 aliases: [step 2.2]
 ---
-# Step 2.2 of [[a0_overall_anno_workflow|overall annotation workflow]]
+# Step 2.2 of [overall annotation workflow](a0_overall_anno_workflow.md)
 
-- Step 2.1: [[a2_1_anno_TEUlt]]
+- Step 2.1: [a2_1_anno_TEUlt](a2_1_anno_TEUlt.md)
 
 !!! info "previous step:"
-[[a1_TEUlt_setup]]
+[a1_TEUlt_setup](a1_TEUlt_setup.md)
 
 !!! warning "IMPORTANT"
 
