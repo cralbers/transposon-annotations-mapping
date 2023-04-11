@@ -1,12 +1,12 @@
 ---
 aliases: [step 2.1]
 ---
-# Step 2.1 of [[a0_overall_anno_workflow|overall annotation workflow]]
+# Step 2.1 of [overall annotation workflow](a0_overall_anno_workflow.md)
 
 - [step 2.2](a2_1_anno_TEUlt.md)
 
 !!! info "previous step:"
-    [[a1_TEUlt_setup]]
+    [a1_TEUlt_setup](a1_TEUlt_setup.md)
     
 - transposon ultimate annotations happen in the **transposon_annotation_tools_env** conda environment
 
@@ -46,10 +46,10 @@ reasonaTE -mode annotate -projectFolder workspace -projectName testProject -tool
 ```
 
 
-### Important notes:
+### Important notes
 - don't use the 'all' function of TEUlt in annotate mode because some of these programs didn't work and caused incomplete runs of other programs that I didn't realize were incomplete until very late
 - some of the specific programs that were wrapped into conda packages for TEUlt (ie MUST v2, SINE Finder) didn't work using the conda packages, which is why I ended up running these locally and then only running specific annotation tools through the TEUlt wrapper
 - run this using a Talapas job script 
 	- this step will take a big long time to run all of these individual tools because of Repeatmasker and Repeatmodeler, so better to just submit the job and let  it run rather than making your poor computer do it locally
-    - sample Talapas job script in [[index.md|code]] folder 
+    - sample Talapas job script in [code](index.md) folder 
 

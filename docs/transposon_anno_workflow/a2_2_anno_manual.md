@@ -9,9 +9,8 @@ aliases: [step 2.2]
     [a1_TEUlt_setup](a1_TEUlt_setup.md)
 
 !!! warning "IMPORTANT"
-
-- these local annotations should be run with the sequence.fasta (and sequence_rc.fasta if needed) file that was generated during the TEUlt setup process ([[a1_TEUlt_setup|step 1]]) to ensure that the chromosome naming is the same across all files
-  - if the chromosome naming is inconsistent, the TEUlt pipeline ([[a5_anno_pipeline|step 5]]) will not run correctly
+    - these local annotations should be run with the sequence.fasta (and sequence_rc.fasta if needed) file that was generated during the TEUlt setup process ([[a1_TEUlt_setup|step 1]]) to ensure that the chromosome naming is the same across all files
+    - if the chromosome naming is inconsistent, the TEUlt pipeline ([[a5_anno_pipeline|step 5]]) will not run correctly
 
 ## Local/manual annotations
 

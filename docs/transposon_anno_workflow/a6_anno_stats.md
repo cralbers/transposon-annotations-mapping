@@ -1,9 +1,9 @@
 ---
 aliases: [step 6]
 ---
-# Step 6 of [[a0_overall_anno_workflow|overall annotation workflow]]
+# Step 6 of [overall annotation workflow](a0_overall_anno_workflow.md)
 !!! info "previous step:"
-    [[a5_anno_pipeline]]
+    [a5_anno_pipeline](a5_anno_pipeline.md)
 
 ## Get statistics on final TE annotations (non size filtered)
 

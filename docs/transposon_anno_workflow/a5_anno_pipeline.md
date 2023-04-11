@@ -1,9 +1,9 @@
 ---
 aliases: [step 5]
 ---
-# Step 5 of [[a0_overall_anno_workflow|overall annotation workflow]]
+# Step 5 of [overall annotation workflow](a0_overall_anno_workflow.md)
 !!! info "previous step:"
-    [[a4_anno_parse]]
+    [a4_anno_parse](a4_anno_parse.md)
 
 ## In & Out
 <table cellpadding="5" style="border: 1px solid black">
