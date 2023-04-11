@@ -6,7 +6,7 @@ aliases: [step 2.2]
 - Step 2.1: [a2_1_anno_TEUlt](a2_1_anno_TEUlt.md)
 
 !!! info "previous step:"
-[a1_TEUlt_setup](a1_TEUlt_setup.md)
+    [a1_TEUlt_setup](a1_TEUlt_setup.md)
 
 !!! warning "IMPORTANT"
 
