@@ -5,7 +5,7 @@ aliases: [overall annotation workflow]
 ---
 
 ## Annotation workflow
-These are the major steps of the transposon annotation and tracking workflow I used to generate the TE annotations and such. 
+These are the major steps of the transposon annotation and tracking workflow I used to generate the TE annotations. 
 
 - all of the individual functions that are defined within the TEUlt are explained here -> [[TEUlt_file_fxs]]
 - changes to integrate LTR Retriever -> [[LTRRet_integration]]

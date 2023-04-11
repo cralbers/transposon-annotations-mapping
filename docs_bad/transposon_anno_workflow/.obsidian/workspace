@@ -1,0 +1,136 @@
+{
+  "main": {
+    "id": "e89602de7adfb69e",
+    "type": "split",
+    "children": [
+      {
+        "id": "44f76e2f85e7b1be",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1d40d7102bd348ad",
+    "type": "split",
+    "children": [
+      {
+        "id": "dab74bc1136a860c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "abc7961ad585ae65",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "12778af09f13920c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "71827bb96ecb8e45",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "11e8eb68712da7f6",
+    "type": "split",
+    "children": [
+      {
+        "id": "af77bdaad9d6d83f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d91bfd07b9fce923",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e4fe7d39ac80a98d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d8e61488d3593002",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d7319b4c57ef3e84",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "abc7961ad585ae65",
+  "lastOpenFiles": [
+    "2_2_anno_manual.md",
+    "3_anno_combine.md",
+    "4_anno_parse.md",
+    "5_anno_pipeline.md",
+    "6_anno_stats.md",
+    "7_size_filter.md",
+    "8_make_pictures.md",
+    "0_overall_workflow.md",
+    "TEUlt_file_fxs.md",
+    "1_TEUlt_setup.md"
+  ]
+}
