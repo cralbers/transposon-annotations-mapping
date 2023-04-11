@@ -27,6 +27,8 @@ theme:
         - navigation.indexes
         - navigation.sections
         - navigation.tabs
+        - toc.integrate
+        - navigation.top
 
 # Extensions
 markdown_extensions:
