@@ -1,10 +1,9 @@
-# step 4 of [[m0_overall_mapping_workflow|overall mapping workflow]]
+# step 4 of [overall mapping workflow](m0_overall_mapping_workflow.md)
 !!! info "previous step:"
-    [[m3_findactuallymoved]]
+    [m3_findactuallymoved](m3_findactuallymoved.md)
 
 
-**link to RIdeogram documentation:**
-https://cran.r-project.org/web/packages/RIdeogram/vignettes/RIdeogram.html
+[link to RIdeogram documentation](https://cran.r-project.org/web/packages/RIdeogram/vignettes/RIdeogram.html)
 - used synteny command to compare locations between the two genomes
 
 ## input and output

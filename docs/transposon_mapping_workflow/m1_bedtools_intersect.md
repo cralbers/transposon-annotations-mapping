@@ -1,4 +1,4 @@
-# Step 1 of [[m0_overall_mapping_workflow|overall mapping workflow]]
+# Step 1 of [overall mapping workflow](m0_overall_mapping_workflow.md)
 
 - use bedtools intersect function to determine overlap of genome 1 (N2) transposons with genome 2 (CB) SNPS relative to genome 1 (N2)
 - this allows for generation of unique transposon sequences that can be tracked between genomes

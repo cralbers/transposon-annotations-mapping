@@ -1,6 +1,6 @@
-# step 2 of [[m0_overall_mapping_workflow|overall mapping workflow]]
+# step 2 of [overall mapping workflow](m0_overall_mapping_workflow.md)
 !!! info "previous step:"
-    [[m1_bedtools_intersect]]
+    [m1_bedtools_intersect](m1_bedtools_intersect.md)
 
 - after running bedtools intersect to get overlap between TEs and SNPs, can then plug in all files to jupyter notebook
 
