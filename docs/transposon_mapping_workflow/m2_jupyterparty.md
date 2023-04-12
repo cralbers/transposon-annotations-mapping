@@ -4,7 +4,7 @@
 
 - after running bedtools intersect to get overlap between TEs and SNPs, can then plug in all files to jupyter notebook
 
-jupyter notebook: [[TEUlt_find_unique_TEs_7.ipynb]]
+jupyter notebook: [[TEUlt_find_unique_TEs_USE_10.ipynb]]
 
 
 file | chromosome names
