@@ -8,4 +8,4 @@ This website is just my notes and process for generating transposon annotations 
 Each of these pages have subpages that outline the general steps I took for each portion of this process! Hopefully this makes sense to somebody other than me :) 
 
 
-
+* Also the github link in the top right corner links to a repo with all of the code I mention in here, as well as my edited TEUlt source code and documentation for the individual programs
