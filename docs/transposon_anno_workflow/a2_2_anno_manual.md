@@ -40,7 +40,7 @@ aliases: [step 2.2]
 
 * LTR Harvest runtimes are really variable- runs in like 10 seconds on Libuda CB but literally took  and hour and a half for the Kim CB, and won't even run for nonTGCA motifs on Kim CB (according to the paper, the program run time is really dependent on how repetitive the genome is)
 
-# MUST
+## MUST
 * [MUST paper link](https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en)
 - [MUST download link](http://www.healthinformaticslab.org/supp/resources.php)
     * yes, this looks sketchy
@@ -49,7 +49,7 @@ aliases: [step 2.2]
 	    * if for some reason there is a more recent version, just try to get the version above because who knows what the new one looks like
 - this program is a hellhole of perl scripts so sorry
 
-## In & Out
+### In & Out
 
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
@@ -73,7 +73,7 @@ genome_MUST_dir
 | |- temp/
 ```
 
-## Dependencies
+### Dependencies
 - NCBI BLAST version 2.2.11 (version used for publication)
 - BLAT version 3.5 (version used for publication)
 - "open-3.3.0” version of RepeatMasker with the revision 1.250 (version used for publication)
@@ -83,7 +83,7 @@ genome_MUST_dir
     - Bash
 - BioPerl
 
-## Running MUST 
+### Running MUST 
 - run on Talapas, this will take a couple hours so best to not run locally
   - example script for running on Talapas in code folder [[kim_must_talapas.sh]]
 - MUST is completely command line (no GUI)
@@ -99,30 +99,30 @@ genome_MUST_dir
 - temp is the temporary directory in which intermediary files will be stored as MUST is running
 	- this directory needs to be created prior to running MUST and located within directory that holds MUST_Pipe.pl script
 
-### command line syntax
+#### command line syntax
 | ![[MUST_CLI.png.png]] |
 |:--:|
 | <b>MUST CLI syntax and options</b> (copied over from [https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en](https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en)|
 
-# LTR Finder
+## LTR Finder
 
 - [LTR Finder paper link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1933203/)
 - [LTR Finder github](https://github.com/xzhub/LTR_Finder)
 - [LTR Finder parallel paper link](https://mobilednajournal.biomedcentral.com/articles/10.1186/s13100-019-0193-0)
 - [LTR Finder parallel github](https://github.com/oushujun/LTR_FINDER_parallel)
 
-## LTR Finder parallel
-### What is it?
+### LTR Finder parallel
+#### What is it?
 - perl wrapper for LTR Finder
 - splits chromosomes into 1Mb segments and then runs LTR Finder on all segments in parallel
 - uses timeout mechanism so that complicated regions are further split if LTR Finder is taking too long on one segment
 
-### Why use it?
+#### Why use it?
 - the original LTR Finder runs sequentially, so is very slow on large genomes
 - LTR Finder frequently used on plant genomes, which are large and also contain massive amounts of LTRs and transposons overall, meaning that this program took forever (1.16 years for the 14.5 Gb bread wheat genome)
 - parallelization of LTR Finder resulted in up to 8500X faster identification of LTRs
 
-## In & Out
+### In & Out
 
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
@@ -138,7 +138,7 @@ genome_MUST_dir
 - **use genome file that was made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILE OUT OF THE TE ULT DIRECTORY**)
 
 
-## Running LTR Finder parallel
+### Running LTR Finder parallel
 - run on Talapas
   - example script for running on Talapas in code folder [[kim_ltrfinder_parallel_talapas.sh]]
   
@@ -147,7 +147,7 @@ perl LTR_FINDER_parallel -harvest_out -seq sequence.fasta
 ```
 
 
-# LTR Harvest
+## LTR Harvest
 - [LTR Harvest documentation](http://genometools.org/tools/gt_ltrharvest.html)
 - run locally through genometools package in specific conda env
 	- [GenomeTools](http://genometools.org/index.html)
@@ -163,7 +163,7 @@ perl LTR_FINDER_parallel -harvest_out -seq sequence.fasta
 	conda install -n envname genometools-genometools
 	```
 
-## In & Out
+### In & Out
 
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
@@ -179,13 +179,13 @@ perl LTR_FINDER_parallel -harvest_out -seq sequence.fasta
 - **use genome file that was made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILE OUT OF THE TE ULT DIRECTORY**)
 
 
-## Dependencies
+### Dependencies
 
 - genometools (conda package)
   - [genometools documentation](https://bioconda.github.io/recipes/genometools-genometools/README.html)
   - [how to install genometools](https://bioinformatics.stackexchange.com/questions/6873/how-to-install-genometools-with-anaconda)
 
-## Running LTR Harvest 
+### Running LTR Harvest 
 commands copied from [https://github.com/oushujun/LTR_retriever#inputs](https://github.com/oushujun/LTR_retriever#inputs)
 1. run gt suffixerator to create necessary indices
 	- [Suffixerator documentation](https://manpages.ubuntu.com/manpages/trusty/man1/gt-suffixerator.1.html)
@@ -203,7 +203,7 @@ gt ltrharvest -index sequence.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -ma
 gt ltrharvest -index sequence.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -maxtsd 6 -similar 85 -vic 10 -seed 20 -seqids yes -v > sequence.harvest.nonTGCA.scn
 ```
 
-### command line syntax
+#### command line syntax
 ![[ltrharvest_CLI.png]]
 
 
@@ -227,14 +227,14 @@ gt ltrharvest -index sequence.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -ma
 
 - **use genome file that was made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILE OUT OF THE TE ULT DIRECTORY**)
 
-## Dependencies
+### Dependencies
 - TRF 
 - BLAST+ 
 - BLAST or CD-HIT
 - HMMER
 - RepeatMasker
 
-## getting LTR RT candidates
+### getting LTR RT candidates
 1. it is sufficient to use only results from [[prgrm_LTRFinder|LTR Finder]] and [[prgrm_LTRHarvest|LTR Harvest]] (pro tip: the output files from these two LTR RT candidate finders do not have to be altered for input into LTR Retriever!)
 2. create a new directory (calling this ltrret_dir for the rest of this) (doesn't really matter where this directory is located at this point) and copy over the following files:
 	- **from LTR Harvest:** sequence.fa.harvest.scn and sequence.fa.harvest.nonTGCA.scn (if you decide to create/use this file for the non TGCA motif option in LTR Retriever)
@@ -261,7 +261,7 @@ cat sequence.fa.harvest.scn sequence.fa.harvest.nonTGCA.scn sequence.fasta.finde
 ```
 
 
-# SINE Finder
+## SINE Finder
 
 - [SINE Finder paper link](https://academic.oup.com/plcell/article/23/9/3117/6097673)
 - the program is located in the supplemental material of the paper (the alternate download link listed (german website) doesn't work, but you can try :))
@@ -270,7 +270,7 @@ cat sequence.fa.harvest.scn sequence.fa.harvest.nonTGCA.scn sequence.fasta.finde
     2. actual python script is Supp Data File 1 (txt file)
     3. make a copy or resave this .txt file as a .py file (change file extension) so that it will be recognized as a python script
 
-## In & Out
+### In & Out
 
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
@@ -285,11 +285,11 @@ cat sequence.fa.harvest.scn sequence.fa.harvest.nonTGCA.scn sequence.fasta.finde
 
 - **use genome file that was made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILE OUT OF THE TE ULT DIRECTORY**)
 
-## Dependencies
+### Dependencies
 
 * Python 2.7
 
-## IMPORTANT NOTES
+### IMPORTANT NOTES
 
 - ==NEED TO RUN CHUNK-WISE== 
   - hey, did you run this chunk-wise?
@@ -299,12 +299,12 @@ cat sequence.fa.harvest.scn sequence.fa.harvest.nonTGCA.scn sequence.fasta.finde
 - need to run with **BOTH** sequence.fasta and sequence_rc.fasta because SINE finder only annotates a single strand
 - **use genome files that were made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILES OUT OF THE TE ULT DIRECTORY**)
 
-## Running SINE Finder
+### Running SINE Finder
 
 - run in Talapas
 - specifically works with python2.7 (not later versions- does some whack stuff and tries to run interactively but then immediately crashes out before any arguments are passed to the prompts, (which is very possibly user error on my part, but this was just the silly way i got it to work) so long story short, have to specify v2.7)
 
-### Steps
+#### Steps
 
 1. go to directory that has sequence.fasta, sequence_rc.fasta and sine_finder.py
 
@@ -318,7 +318,7 @@ cat sequence.fa.harvest.scn sequence.fa.harvest.nonTGCA.scn sequence.fasta.finde
    python2.7 sine_finder.py -T "chunkwise" -V -f both sequence.fasta > kim_sinefinder.out
    ```
 
-### command line syntax
+#### command line syntax
 
 ```
 sine_finder [options] <fastafile_name>
