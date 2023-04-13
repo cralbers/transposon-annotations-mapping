@@ -3,7 +3,7 @@ aliases: [step 2.1]
 ---
 # Step 2.1 of [overall annotation workflow](a0_overall_anno_workflow.md)
 
-- [step 2.2](a2_1_anno_TEUlt.md)
+- Step 2.2: [a2_2_anno_TEUlt](a2_2_anno_TEUlt.md)
 
 !!! info "previous step:"
     [a1_TEUlt_setup](a1_TEUlt_setup.md)

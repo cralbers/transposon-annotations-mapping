@@ -29,6 +29,8 @@ theme:
         - navigation.tabs
         - toc.integrate
         - navigation.top
+    icon:
+      repo: fontawesome/brands/github
 
 # Extensions
 markdown_extensions:
@@ -69,7 +71,7 @@ plugins:
         arguments:
           securityLevel: 'loose'
 
-
+repo_url: https://github.com/cralbers/transposons-annotations-mapping-code
       
 
 extra_javascript:
