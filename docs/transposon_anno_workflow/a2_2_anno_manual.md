@@ -85,9 +85,9 @@ genome_MUST_dir
 
 ### Running MUST 
 - run on Talapas, this will take a couple hours so best to not run locally
-  - example script for running on Talapas in code folder [[kim_must_talapas.sh]]
+  - example script for running on Talapas in code folder [[scripts/must_talapas.sh]]
 - MUST is completely command line (no GUI)
-- use the perl script (in [[MUST_Pipe|MUST perl script]]) and run in shell using some form of the command below:
+- use the perl script (in [[scripts/MUST_Pipe.md]]) and run in shell using some form of the command below:
 
 ```bash
 ./MUST_Pipe.pl <genome.fasta> <result.txt> <temp> [OPTIONS]
@@ -140,7 +140,7 @@ genome_MUST_dir
 
 ### Running LTR Finder parallel
 - run on Talapas
-  - example script for running on Talapas in code folder [[kim_ltrfinder_parallel_talapas.sh]]
+  - example script for running on Talapas in code folder [[scripts/ltrfinder_parallel_talapas.sh]]
   
 ```bash
 perl LTR_FINDER_parallel -harvest_out -seq sequence.fasta 
@@ -250,7 +250,7 @@ cat sequence.fa.harvest.scn sequence.fa.harvest.nonTGCA.scn sequence.fasta.finde
 4. upload ltrret_dir directory to Talapas
 5. upload the LTR Retriever code folder to ltrret_dir (or just clone the git repo into ltrret_dir)
 6. use command below to run LTR Retriever 
-	- example script for running on Talapas in code folder ([[kimltrret.sh]])
+	- example script for running on Talapas in code folder ([[scripts/ltrret_talapas.sh]])
 	- need to make sure that ug has rwx permissions for the LTR_Retriever executable in the LTR Retriever code folder before submitting batch job (it won't work to just give rwx to the LTR Retriever code directory, you've gotta specify the executable directly or else it gets mad and says Permission Denied)
 	```bash
 	chmod ug+rwx ~/LTR_retriever/LTR_retriever
