@@ -31,6 +31,7 @@ Two sets of size parameters- stringent and non-stringent. I decided on these bas
 
 ### Stringent size parameters
 - DNA:
+
 TE | size (bp) 
 ------------ | ------------
 Helitron | 4500
@@ -41,7 +42,9 @@ Sola | 1- 2000-6000, 2- 4000-5000, 3- 5000-7000
 Tc1/Mariner | 1600
 MITE | 100-800
 Novosib | 
+
 - Retro:
+
 TE | size (bp) 
 ------------ | ------------
 Gypsy | 9000
@@ -53,6 +56,7 @@ ERV| 8000
 
 ### Non-stringent size parameters
 - DNA:
+
 TE | size (bp) 
 ------------ | ------------
 Helitron | 20000
