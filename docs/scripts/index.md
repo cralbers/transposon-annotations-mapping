@@ -26,4 +26,6 @@ aliases: [code]
 ## Jupyter notebooks
 - TE Ult reasonaTE graphing: [[TEUlt_reasonaTE_graphs.ipynb]]
 - TE Ult size filtering: [[TEUlt_reasonaTE_sizefilter.ipynb]]
-- TE Ult TE mapping: [[TEUlt_find_unique_TEs_USE_10.ipynb]]
+- TE Ult resonaTE graphing and size filtering in one notebook (also the most recently updated version): [[TEUlt_reasonaTE_gff_USE_10.ipynb]]
+- TE Ult TE mapping: [[TEUlt_find_unique_TEs_7.ipynb]]
+
