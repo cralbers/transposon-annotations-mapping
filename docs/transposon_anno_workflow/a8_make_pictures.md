@@ -19,5 +19,5 @@ aliases: [step 8]
 
 graphing functions in jupyter notebook format:
 
-![[scripts/TEUlt_reasonaTE_graphs.ipynb]]
+![[/scripts/TEUlt_reasonaTE_graphs.ipynb]]
 
