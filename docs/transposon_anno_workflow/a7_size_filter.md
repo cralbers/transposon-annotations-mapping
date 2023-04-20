@@ -63,7 +63,9 @@ Sola | 7000
 Tc1/Mariner | 20000
 MITE | 1000
 Novosib | 3000
+
 - Retro:
+
 TE | size (bp) 
 ------------ | ------------
 Gypsy | 20000
