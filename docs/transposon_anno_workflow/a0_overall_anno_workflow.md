@@ -7,9 +7,13 @@ aliases: [overall annotation workflow]
 ## Annotation workflow
 These are the major steps of the transposon annotation and tracking workflow I used to generate the TE annotations. 
 
-- all of the individual functions that are defined within the TEUlt are explained here -> [[TEUlt_file_fxs]]
-- changes to integrate LTR Retriever -> [[LTRRet_integration]]
-- other random changes to source code -> [[other_source_changes]]
+- all of the individual functions that are defined within the TEUlt are explained here -> [[TEUlt_file_fxs]] (this is a work in progress)
+- source code changes: 
+	- changes to integrate LTR Retriever -> [[LTRRet_integration]]
+	- other random changes -> [[other_source_changes]]
+
+!!! note 
+	the entire edited source code is available on the github link in the top right
 
 ## Diagram
 ``` mermaid 

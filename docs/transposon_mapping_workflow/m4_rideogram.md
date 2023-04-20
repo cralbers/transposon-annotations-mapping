@@ -10,7 +10,7 @@
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
         <td style="border: 1px solid black" >INPUT</td>
-        <td style="border: 1px solid black">output tsv file from the jupyter notebook/python script that is specifically formatted for RIdeogram</td>
+        <td style="border: 1px solid black">output tsv file from the jupyter notebook from the previous step that is specifically formatted for RIdeogram</td>
     </tr>
     <tr>
         <td style="border: 1px solid black">OUTPUT</td>
