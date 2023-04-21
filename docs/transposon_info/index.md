@@ -23,3 +23,7 @@ Info I have collected about the TE families annotated by TEUlt and all of the in
 - [The outs and ins of transposition: from Mu to Kangaroo](https://www.nature.com/articles/nrm1241) (Curcio and Derbyshire)
 - [The catalytic domain of all eukaryotic cut-and-paste transposase superfamilies](www.pnas.org/cgi/doi/10.1073/pnas.1104208108) (Yuan and Wessler)
 - [Rolling-circle transposons in eukaryotes](https://www.pnas.org/content/98/15/8714) (Kapitonov and Jurka)
+- [Repetitive-DNA elements are similarly distributed on Caenorhabditis elegans autosomes](https://www.pnas.org/content/97/1/245) (Surzycki)
+- [Natural Variation in the Distribution and Abundance of Transposable Elements Across the Caenorhabditis Species](https://academic.oup.com/mbe/article/34/9/2187/3806756) (Laricchia)
+- [Identification of putative nonautonomous transposable elements associated with several transposon families in Caenorhabditis elegans](https://link.springer.com/article/10.1007/BF02352294) (Oosumi)
+- [Exploratory analysis of transposable elements expression in the C. elegans early embryo](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-019-3088-7) (Ansaloni)

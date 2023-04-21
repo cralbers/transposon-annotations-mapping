@@ -11,6 +11,8 @@ aliases: [step 7]
 	- [[TEUlt_reasonaTE_sizefilter.ipynb]] (jupyter notebook)
 - this is really tricky because how do you establish parameters that do not eliminate tandem repeats or nested TEs, but also get rid of ridiculous TEs?
 	- scan for tandem repeats with another program and compare to TEs eliminated using stringent parameters?
+    - use Tandem Repeat Finder to find tandem repeats and their overlap with annotated TEs? [TRF paper](https://academic.oup.com/nar/article/27/2/573/1061099?login=true)
+    - use Red to detect de novo repeats and their overlap with annotated TEs? [Red paper](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0654-5)
 
 
 ## In & out:
