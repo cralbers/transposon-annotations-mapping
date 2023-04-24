@@ -7,7 +7,7 @@ aliases: [overall annotation workflow]
 ## Annotation workflow
 These are the major steps of the transposon annotation and tracking workflow I used to generate the TE annotations. 
 
-!!! example
+!!! Example "important"
 	Transposon Ultimate is referred to as TEUlt throughout this site.
 
 	[TEUlt paper](https://academic.oup.com/nar/article/50/11/e64/6541023?login=true)
@@ -19,7 +19,7 @@ These are the major steps of the transposon annotation and tracking workflow I u
 	- changes to integrate LTR Retriever -> [[LTRRet_integration]]
 	- other random changes -> [[other_source_changes]]
 
-!!! note 
+!!! note "note"
 	the entire edited source code is available on the github link in the top right
 
 ## Diagram

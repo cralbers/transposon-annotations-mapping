@@ -27,6 +27,21 @@ reasonaTE -mode pipeline -projectFolder workspace -projectName testProject
 - replace workspace with the name of your workspace
 - replace testProject with the name of your project
 
+## Annotation output format
+The output files are formatted according to the standard gff3 format which is documented here -> [gff3 format](https://useast.ensembl.org/info/website/upload/gff3.html)
+
+column | title | description
+---- | ---- | ----
+1 | sequence id | name of the chromosome
+2 | source | name of the program the annotation came from (for TEUlt, when all the annotations are consolidated, the individual program names are removed and all annotations are listed as sources from reasonaTE)
+3 | type | what the annotation feature is 
+4 | start | start position of the annotation
+5 | stop | end position of the annotation
+6 | score | depends on the individual program annotation is from
+7 | strand | + for forward and - for reverse
+8 | phase | indicates the first base of the annotation that is the first base of a codon (will be a "." for TEUlt because codons weren't analyzed)
+9 | description | other descriptors that were added by individual programs 
+
 ## Diagram of TEUlt pipeline 
 
 ![[TEUlt_pipeline_Riehl.png]]
