@@ -1,0 +1,822 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.5.3, mkdocs-material-9.4.14" name="generator"/>
+<title>MUST Pipe - Transposon Annotations and Mapping</title>
+<link href="../../assets/stylesheets/main.fad675c6.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.356b1318.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="deep-orange" data-md-color-primary="blue-grey" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Transposon Annotations and Mapping" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Transposon Annotations and Mapping">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Transposon Annotations and Mapping
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              MUST Pipe
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="deep-orange" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="blue-grey" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="blue-grey" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/cralbers/transposons-annotations-mapping-code" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+        
+  
+    
+  
+  Home
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../transposon_anno_workflow/a0_overall_anno_workflow/">
+          
+  
+    
+  
+  Transposon Annotations
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../transposon_mapping_workflow/m0_overall_mapping_workflow/">
+          
+  
+    
+  
+  Transposon Mapping
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../">
+          
+  
+    
+  
+  Code
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../transposon_info/">
+          
+  
+    
+  
+  Transposon Information
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Transposon Annotations and Mapping" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Transposon Annotations and Mapping">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    Transposon Annotations and Mapping
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/cralbers/transposons-annotations-mapping-code" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<span class="md-ellipsis">
+    Transposon Annotations
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Transposon Annotations
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a0_overall_anno_workflow/">
+<span class="md-ellipsis">
+    Overall Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a1_TEUlt_setup/">
+<span class="md-ellipsis">
+    Step 1 - TEUlt setup
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a2_1_anno_TEUlt/">
+<span class="md-ellipsis">
+    Step 2.1 - TEUlt annotations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a2_2_anno_manual/">
+<span class="md-ellipsis">
+    Step 2.2 - Manual annotations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a3_anno_combine/">
+<span class="md-ellipsis">
+    Step 3 - Combine annotations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a4_anno_parse/">
+<span class="md-ellipsis">
+    Step 4 - Parse annotations
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a5_anno_pipeline/">
+<span class="md-ellipsis">
+    Step 5 - Run TEUlt pipeline
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a6_anno_stats/">
+<span class="md-ellipsis">
+    Step 6 - Annotation stats (NOT size filtered)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a7_size_filter/">
+<span class="md-ellipsis">
+    Step 7 - Size filtering
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_anno_workflow/a8_make_pictures/">
+<span class="md-ellipsis">
+    Step 8 - Analysis and graphs
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-ellipsis">
+    Transposon Mapping
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Transposon Mapping
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_mapping_workflow/m0_overall_mapping_workflow/">
+<span class="md-ellipsis">
+    Overall Workflow
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_mapping_workflow/m1_bedtools_intersect/">
+<span class="md-ellipsis">
+    Step 1 - Determine overlap
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_mapping_workflow/m2_jupyterparty/">
+<span class="md-ellipsis">
+    Step 2 - Jupyter notebook party
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_mapping_workflow/m3_findactuallymoved/">
+<span class="md-ellipsis">
+    Step 3 - Find TEs that actually moved
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../transposon_mapping_workflow/m4_rideogram/">
+<span class="md-ellipsis">
+    Step 4 - RIdeogram
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    Code
+  </span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Code
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../../transposon_info/">
+<span class="md-ellipsis">
+    Transposon Information
+  </span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+            Transposon Information
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>MUST Pipe</h1>
+<ul>
+<li>this is the perl script that you will actually use- if you know how to read perl, more power to ya</li>
+<li>it's called MUST_Pipe.pl in the unzipped MUST program folder, don't use any of the other ones that are called ~old.pl and whatnot</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/perl -w</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">strict</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">warnings</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">MIME::Base64</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">Bio::SeqIO</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">Bio::SearchIO</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">threads</span><span class="p">;</span>
+<span class="k">use</span><span class="w"> </span><span class="nn">threads::shared</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tline</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="k">my</span><span class="nv">@tlist</span><span class="o">=</span><span class="p">();</span><span class="k">my</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="k">my</span><span class="nv">$tempj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="k">my</span><span class="nv">$tempk</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="k">my</span><span class="nv">$pline</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="k">my</span><span class="nv">@plist</span><span class="o">=</span><span class="p">();</span><span class="k">my</span><span class="nv">$tid</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="k">my</span><span class="nv">%tidx</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$egDirTemp</span><span class="o">=</span><span class="s">"tempData"</span><span class="p">;</span><span class="k">my</span><span class="nv">$egScriptMUST</span><span class="o">=</span><span class="s">"MUST"</span><span class="p">;</span><span class="k">my</span><span class="nv">$egScriptPWD</span><span class="o">=</span><span class="s">"PairWiseDistance"</span><span class="p">;</span><span class="k">my</span><span class="nv">$egScriptFilter</span><span class="o">=</span><span class="s">"filterRedundancy.new.pl"</span><span class="p">;</span><span class="k">my</span><span class="nv">$egLogFilter</span><span class="o">=</span><span class="s">"log.filterRedundancy.new.log"</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="s">"echo \"\" &gt; \"$egLogFilter\""</span><span class="p">)){</span><span class="nb">die</span><span class="s">"-Error when clearing the log file!\n"</span><span class="p">;}</span><span class="k">my</span><span class="nv">$egDirScript</span><span class="o">=</span><span class="nv">$0</span><span class="p">;</span>
+<span class="nv">@tlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/\//</span><span class="p">,</span><span class="nv">$egDirScript</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">@tlist</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span><span class="nv">$egDirScript</span><span class="o">=</span><span class="s">"."</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="nv">$egDirScript</span><span class="o">=~</span><span class="sr">s/\/$tlist[@tlist-1]$//g</span><span class="p">;}</span><span class="vg">$|</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$gMinTIR</span><span class="o">=</span><span class="mi">8</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$gMaxTIR</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$gMinDR</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$gMaxDR</span><span class="o">=</span><span class="mi">30</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$gMinMITE</span><span class="o">=</span><span class="mi">100</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$gMaxMITE</span><span class="o">=</span><span class="mi">600</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$gFixedFlanking</span><span class="o">=</span><span class="mi">50</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$gMutationRate</span><span class="o">=</span><span class="mf">0.80</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egFileSeq</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egFileOut</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egPTNum</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+<span class="k">if</span><span class="p">((</span><span class="nv">@ARGV</span><span class="o">==</span><span class="mi">3</span><span class="p">)</span><span class="ow">or</span><span class="p">(</span><span class="nv">@ARGV</span><span class="o">==</span><span class="mi">12</span><span class="p">)){}</span><span class="k">else</span><span class="p">{</span><span class="k">print</span><span class="s">"Error in syntax!\n"</span><span class="p">;</span>
+<span class="o">&amp;</span><span class="n">efSyntax</span><span class="p">();</span>
+<span class="nb">die</span><span class="s">"-----------------------------------------------------------------------------\n"</span><span class="p">;}</span><span class="nv">$egFileSeq</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="nv">$egFileOut</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="nv">$egDirTemp</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="k">my</span><span class="nv">$egFileSize</span><span class="o">=-</span><span class="n">s</span><span class="nv">$egFileSeq</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egSizeOne</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nv">$egFileSize</span><span class="o">/</span><span class="nv">$egPTNum</span><span class="o">+</span><span class="mf">1.0</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="o">-</span><span class="n">d</span><span class="nv">$egDirTemp</span><span class="p">){}</span><span class="k">else</span><span class="p">{</span><span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="s">"mkdir -p \"$egDirTemp\""</span><span class="p">)){</span><span class="nb">die</span><span class="s">"-Error when creating the temporary directory!\n"</span><span class="p">;}}</span><span class="k">if</span><span class="p">(</span><span class="nv">@ARGV</span><span class="o">==</span><span class="mi">12</span><span class="p">){</span><span class="nv">$egPTNum</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="nv">$gMinTIR</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="nv">$gMaxTIR</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="nv">$gMinDR</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span><span class="nv">$gMaxDR</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span><span class="nv">$gMinMITE</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="nv">$gMaxMITE</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">9</span><span class="p">];</span><span class="nv">$gFixedFlanking</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span><span class="nv">$gMutationRate</span><span class="o">=</span><span class="nv">$ARGV</span><span class="p">[</span><span class="mi">11</span><span class="p">];}</span><span class="k">my</span><span class="nv">$egCutOffIdent</span><span class="o">=</span><span class="nv">$gMutationRate</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">%mMITE2ID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mGID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mStart</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mEnd</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mStrand</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mLength</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mDR</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mDRIdent</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mDRLeft</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mDRRight</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mTIR</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mTIRIdent</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mTIRLeft</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mTIRRight</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mDRAT</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mTIRAT</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mMITEAT</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mFDRAT</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mPreSite</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mPostSite</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mMITE</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mCopyNum</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mCopies</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mTotalScore</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mFlag</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$mNum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">%mData</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">%egExistCopy</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$egCutOffCopyScore</span><span class="o">=</span><span class="mi">10</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egLineLength</span><span class="o">=</span><span class="mi">60</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egTimeOld</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egSeq</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egID</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$lFile</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$lFSeq</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$lCmdLine</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$lFileDat</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$lFileTIR</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$lFileEdge</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="nv">$egTimeOld</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egTID</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egFileSub</span><span class="o">=</span><span class="s">"$egDirTemp/sub-genome.$egTID.fasta"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egSizeNow</span><span class="o">=</span><span class="nv">$egSizeOne</span><span class="p">;</span>
+<span class="k">print</span><span class="s">"Spliting the genome into $egPTNum sub-genomes ... "</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efO</span><span class="p">,</span><span class="s">"&gt;$egFileSub"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"Error:$egTID!\n"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egSeqObj</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="nn">Bio::</span><span class="n">SeqIO</span><span class="p">(</span><span class="o">-</span><span class="n">file</span><span class="o">=&gt;</span><span class="s">"$egFileSeq"</span><span class="p">,</span><span class="o">-</span><span class="nb">format</span><span class="o">=&gt;</span><span class="s">"fasta"</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="k">my</span><span class="nv">$egSeqO</span><span class="o">=</span><span class="nv">$egSeqObj</span><span class="o">-&gt;</span><span class="n">next_seq</span><span class="p">){</span><span class="nv">$tline</span><span class="o">=</span><span class="nv">$egSeqO</span><span class="o">-&gt;</span><span class="n">seq</span><span class="p">;</span><span class="nv">$egSeq</span><span class="o">=</span><span class="s">"\U$tline\E"</span><span class="p">;</span><span class="nv">$egID</span><span class="o">=</span><span class="nv">$egSeqO</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tStartPos</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tLength</span><span class="o">=</span><span class="nb">length</span><span class="p">(</span><span class="nv">$egSeq</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nv">$egTID</span><span class="o">&gt;=</span><span class="nv">$egPTNum</span><span class="p">){</span><span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">"&gt;$tStartPos;;$egID\n"</span><span class="o">.</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$egSeq</span><span class="p">,</span><span class="nv">$tStartPos</span><span class="p">,</span><span class="nv">$tLength</span><span class="o">-</span><span class="nv">$tStartPos</span><span class="p">)</span><span class="o">.</span><span class="s">"\n"</span><span class="p">;</span>
+<span class="nv">$egSizeNow</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tStartPos</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">last</span><span class="p">;}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">$egSizeNow</span><span class="o">&gt;=</span><span class="nv">$tLength</span><span class="o">-</span><span class="nv">$tStartPos</span><span class="p">){</span><span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">"&gt;$tStartPos;;$egID\n"</span><span class="o">.</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$egSeq</span><span class="p">,</span><span class="nv">$tStartPos</span><span class="p">,</span><span class="nv">$tLength</span><span class="o">-</span><span class="nv">$tStartPos</span><span class="p">)</span><span class="o">.</span><span class="s">"\n"</span><span class="p">;</span>
+<span class="nv">$egSizeNow</span><span class="o">-=</span><span class="nv">$tLength</span><span class="o">-</span><span class="nv">$tStartPos</span><span class="p">;</span>
+<span class="nv">$tStartPos</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">last</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">"&gt;$tStartPos;;$egID\n"</span><span class="o">.</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$egSeq</span><span class="p">,</span><span class="nv">$tStartPos</span><span class="p">,</span><span class="nv">$egSizeNow</span><span class="p">)</span><span class="o">.</span><span class="s">"\n"</span><span class="p">;</span>
+<span class="nv">$tStartPos</span><span class="o">+=</span><span class="nv">$egSizeNow</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="nv">$gFixedFlanking</span><span class="o">+</span><span class="nv">$gMaxDR</span><span class="o">+</span><span class="nv">$gMaxMITE</span><span class="o">+</span><span class="nv">$gMaxDR</span><span class="o">+</span><span class="nv">$gFixedFlanking</span><span class="p">);</span>
+<span class="nb">close</span><span class="p">(</span><span class="n">efO</span><span class="p">);</span>
+<span class="nv">$egTID</span><span class="o">++</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efO</span><span class="p">,</span><span class="s">"&gt;$egDirTemp/sub-genome.$egTID.fasta"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"EEE:$egTID!\n"</span><span class="p">;</span>
+<span class="nv">$egSizeNow</span><span class="o">=</span><span class="nv">$egSizeOne</span><span class="p">;}}}</span><span class="nv">$egTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="nb">close</span><span class="p">(</span><span class="n">efO</span><span class="p">);</span>
+<span class="k">print</span><span class="s">" [SubFiles:$egTID] [done] [Elapsed time: "</span><span class="o">.</span><span class="p">(</span><span class="nv">$egTimeNew</span><span class="o">-</span><span class="nv">$egTimeOld</span><span class="p">)</span><span class="o">.</span><span class="s">" seconds]\n"</span><span class="p">;</span>
+<span class="k">print</span><span class="s">"Scanning the nucleotide sequences for potential MITEs ... "</span><span class="p">;</span>
+<span class="nv">$egTimeOld</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@egPTID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$egSleepTime</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nv">$tempi</span><span class="sr">&lt;=$egPTNum;$tempi++){my$tPID=threads-&gt;</span><span class="k">new</span><span class="p">(</span><span class="o">\&amp;</span><span class="n">efPTMUST</span><span class="p">,</span><span class="nv">$tempi</span><span class="p">,</span><span class="s">"$egDirTemp/sub-genome.$tempi.fasta"</span><span class="p">);</span>
+<span class="nv">$egPTID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=</span><span class="nv">$tPID</span><span class="p">;}</span><span class="nv">$egTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="nv">%tidx</span><span class="o">=</span><span class="p">();</span>
+<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span><span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;=</span><span class="nv">$egPTNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="nv">$tid</span><span class="o">=</span><span class="nv">$egPTID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">];</span>
+<span class="k">if</span><span class="p">((</span><span class="nv">$tid</span><span class="o">-&gt;</span><span class="n">is_joinable</span><span class="p">())</span><span class="ow">and</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nb">defined</span><span class="nv">$tidx</span><span class="p">{</span><span class="s">"$tempi"</span><span class="p">}))){</span><span class="nv">$tid</span><span class="o">-&gt;</span><span class="nb">join</span><span class="p">();</span><span class="nv">$tidx</span><span class="p">{</span><span class="s">"$tempi"</span><span class="p">}</span><span class="o">=</span><span class="mi">1</span><span class="p">;}}</span><span class="k">if</span><span class="p">((</span><span class="nb">scalar</span><span class="w"> </span><span class="nb">keys</span><span class="nv">%tidx</span><span class="p">)</span><span class="o">==</span><span class="nv">$egPTNum</span><span class="p">){</span><span class="k">last</span><span class="p">;}</span><span class="nb">sleep</span><span class="p">(</span><span class="nv">$egSleepTime</span><span class="p">);}</span><span class="nv">$egTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">print</span><span class="s">"Total calculation time elapsed: "</span><span class="o">.</span><span class="p">(</span><span class="nv">$egTimeNew</span><span class="o">-</span><span class="nv">$egTimeOld</span><span class="p">)</span><span class="o">.</span><span class="s">" seconds.\n"</span><span class="p">;</span>
+<span class="k">print</span><span class="s">"Loading the annotation data ... "</span><span class="p">;</span>
+<span class="nv">$egTimeOld</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="nv">$tempj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempk</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;=</span><span class="nv">$egPTNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="nv">$tempj</span><span class="o">=&amp;</span><span class="n">efLoadMUST</span><span class="p">(</span><span class="s">"$egDirTemp/$tempi.temp_seq.dat"</span><span class="p">);</span>
+<span class="nv">$tempk</span><span class="o">+=</span><span class="nv">$tempj</span><span class="p">;}</span><span class="nv">$egTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">print</span><span class="s">" [RawMITEs:$tempk] [done] [Time:"</span><span class="o">.</span><span class="p">(</span><span class="nv">$egTimeNew</span><span class="o">-</span><span class="nv">$egTimeOld</span><span class="p">)</span><span class="o">.</span><span class="s">" seconds]\n"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egCmdLine</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">print</span><span class="s">"Removing redundancy in the predicted MITEs ... "</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@mSortID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mNewID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="sr">&lt;$mNum;$tempi++){$mSortID[$tempi]=$tempi;}@mNewID=sort{$mGID[$a]cmp$mGID[$b]or$mStart[$a]&lt;=&gt;</span><span class="nv">$mStart</span><span class="p">[</span><span class="nv">$b</span><span class="p">]</span><span class="ow">or</span><span class="nv">$mEnd</span><span class="p">[</span><span class="nv">$a</span><span class="p">]</span><span class="sr">&lt;=&gt;</span><span class="nv">$mEnd</span><span class="p">[</span><span class="nv">$b</span><span class="p">]}</span><span class="nv">@mSortID</span><span class="p">;</span>
+<span class="nv">$tempk</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">@mNewID</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="k">my</span><span class="p">(</span><span class="nv">$newA</span><span class="p">,</span><span class="nv">$newB</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="nv">$mNewID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">],</span><span class="nv">$mNewID</span><span class="p">[</span><span class="nv">$tempi</span><span class="o">+</span><span class="mi">1</span><span class="p">]);</span>
+<span class="nv">$tempj</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="p">((</span><span class="nv">$mFlag</span><span class="p">[</span><span class="nv">$newA</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$mEnd</span><span class="p">[</span><span class="nv">$newA</span><span class="p">]</span><span class="o">&gt;=</span><span class="nv">$mStart</span><span class="p">[</span><span class="nv">$newB</span><span class="p">])){</span><span class="k">if</span><span class="p">(</span><span class="nv">$mFlag</span><span class="p">[</span><span class="nv">$newB</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span><span class="nv">$tempj</span><span class="o">++</span><span class="p">;</span><span class="nv">$newB</span><span class="o">=</span><span class="nv">$mNewID</span><span class="p">[</span><span class="nv">$tempi</span><span class="o">+</span><span class="nv">$tempj</span><span class="p">];}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">$mTotalScore</span><span class="p">[</span><span class="nv">$newA</span><span class="p">]</span><span class="o">&gt;=</span><span class="nv">$mTotalScore</span><span class="p">[</span><span class="nv">$newB</span><span class="p">]){</span><span class="nv">$mFlag</span><span class="p">[</span><span class="nv">$newB</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nv">$tempk</span><span class="o">++</span><span class="p">;</span>
+<span class="nv">$tempj</span><span class="o">++</span><span class="p">;</span>
+<span class="nv">$newB</span><span class="o">=</span><span class="nv">$mNewID</span><span class="p">[</span><span class="nv">$tempi</span><span class="o">+</span><span class="nv">$tempj</span><span class="p">];}</span><span class="k">else</span><span class="p">{</span><span class="nv">$mFlag</span><span class="p">[</span><span class="nv">$newA</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nv">$tempk</span><span class="o">++</span><span class="p">;}}}</span><span class="k">print</span><span class="s">" [RuleBasedRemoving:$tempk]"</span><span class="p">;</span>
+<span class="nv">$tempj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nv">$mFlag</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span><span class="nv">$tempj</span><span class="o">++</span><span class="p">;}}</span><span class="nv">$egTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">print</span><span class="s">" [MITE:$tempj] [done] [Time:"</span><span class="o">.</span><span class="p">(</span><span class="nv">$egTimeNew</span><span class="o">-</span><span class="nv">$egTimeOld</span><span class="p">)</span><span class="o">.</span><span class="s">" seconds]\n"</span><span class="p">;</span>
+<span class="nv">$egTimeOld</span><span class="o">=</span><span class="nv">$egTimeNew</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egCutOffCopyNum</span><span class="o">=</span><span class="mi">3</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egCutOffEValue</span><span class="o">=</span><span class="mf">1e-20</span><span class="p">;</span>
+<span class="k">print</span><span class="s">"Clustering ... "</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@mClusterID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">%mC2IDs</span><span class="o">=</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=-</span><span class="mi">1</span><span class="p">;}</span><span class="k">my</span><span class="nv">$mCluster</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$mMITEWithCluster</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">%tInCluster</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$tFirstMITE</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@tInClusterList</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tNeighborList</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$egClusterMode</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$egFileMITESeq</span><span class="o">=</span><span class="s">"$egDirTemp/temp-mite-seq.fasta"</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efO</span><span class="p">,</span><span class="s">"&gt;$egFileMITESeq"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"E!\n"</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">"&gt;$tempi\n$mMITE[$tempi]\n"</span><span class="p">;}</span><span class="nb">close</span><span class="p">(</span><span class="n">efO</span><span class="p">);</span>
+<span class="nb">system</span><span class="p">(</span><span class="s">"formatdb -p F -i \"$egFileMITESeq\""</span><span class="p">);</span>
+<span class="nb">system</span><span class="p">(</span><span class="s">"megablast -d \"$egFileMITESeq\" -i \"$egFileMITESeq\" -F F -e $egCutOffEValue -m 9 -o \"$egDirTemp/temp-mite-seq.all-vs-all.megablast.txt\" 2&gt;&amp;1 1&gt;&gt;\"$egDirTemp/temp-mite-seq.all-vs-all.megablast.log\" "</span><span class="p">);</span>
+<span class="k">print</span><span class="s">" [BLAST]"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">%idxIdent</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">%idxSameStrand</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mCC</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@mFF</span><span class="o">=</span><span class="p">();</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efI</span><span class="p">,</span><span class="s">"$egDirTemp/temp-mite-seq.all-vs-all.megablast.txt"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"EE!\n---[$egDirTemp/temp-mite-seq.all-vs-all.megablast.txt]---\n"</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="sr">&lt;efI&gt;</span><span class="p">){</span><span class="nv">$tline</span><span class="o">=</span><span class="nv">$_</span><span class="p">;</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">s/[\r\n]//g</span><span class="p">;</span><span class="nv">@tlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/\t/</span><span class="p">,</span><span class="nv">$tline</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">/^#/</span><span class="p">){}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">@tlist</span><span class="o">&gt;=</span><span class="mi">12</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">&lt;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]){</span><span class="nv">$idxIdent</span><span class="p">{</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]}</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="sr">&lt;=$tlist[9]){$idxSameStrand{$tlist[0].$tlist[1]}=1;}}elsif($tlist[0]&gt;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]){</span><span class="nv">$idxIdent</span><span class="p">{</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">*</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="mi">100</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">&lt;=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">9</span><span class="p">]){</span><span class="nv">$idxSameStrand</span><span class="p">{</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]}</span><span class="o">=</span><span class="mi">1</span><span class="p">;}}}}</span><span class="nb">close</span><span class="p">(</span><span class="n">efI</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="nv">$mCC</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=</span><span class="s">"$tempi"</span><span class="p">;</span>
+<span class="nv">$mFF</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;}</span><span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="k">for</span><span class="p">(</span><span class="nv">$tempj</span><span class="o">=</span><span class="nv">$tempi</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="nv">$tempj</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempj</span><span class="o">++</span><span class="p">){</span><span class="nv">$tid</span><span class="o">=</span><span class="nv">$idxIdent</span><span class="p">{</span><span class="nv">$tempi</span><span class="o">.</span><span class="nv">$tempj</span><span class="p">};</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">defined</span><span class="nv">$tid</span><span class="p">){</span><span class="k">if</span><span class="p">((</span><span class="nv">$tid</span><span class="o">&gt;=</span><span class="nv">$egCutOffIdent</span><span class="o">*</span><span class="nv">$mLength</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">])</span><span class="ow">and</span><span class="p">(</span><span class="nv">$tid</span><span class="o">&gt;=</span><span class="nv">$egCutOffIdent</span><span class="o">*</span><span class="nv">$mLength</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">])){</span><span class="nv">$mCC</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">.=</span><span class="s">" $tempj"</span><span class="p">;</span>
+<span class="nv">$mCC</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">]</span><span class="o">.=</span><span class="s">" $tempi"</span><span class="p">;}}}}</span><span class="k">my</span><span class="nv">@mCFlag</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$egClusterNumber</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="k">my</span><span class="nv">$kCID</span><span class="o">=</span><span class="nv">$egClusterNumber</span><span class="p">;</span>
+<span class="nv">$mCC</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=~</span><span class="sr">s/^ +//g</span><span class="p">;</span>
+<span class="nv">@tlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/ /</span><span class="p">,</span><span class="nv">$mCC</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]);</span>
+<span class="k">if</span><span class="p">((</span><span class="nb">scalar</span><span class="nv">@tlist</span><span class="p">)</span><span class="o">&lt;</span><span class="nv">$egCutOffCopyNum</span><span class="p">){</span><span class="nv">$mCFlag</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="nv">$mCFlag</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempj</span><span class="sr">&lt;@tlist;$tempj++){if(($mClusterID[$tlist[$tempj]]&gt;</span><span class="mi">0</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tlist</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">]]</span><span class="o">&lt;</span><span class="nv">$kCID</span><span class="p">)){</span><span class="nv">$kCID</span><span class="o">=</span><span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">];}}</span><span class="k">for</span><span class="p">(</span><span class="nv">$tempj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempj</span><span class="o">&lt;</span><span class="nv">@tlist</span><span class="p">;</span><span class="nv">$tempj</span><span class="o">++</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tlist</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">]]</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span><span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tlist</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">]]</span><span class="o">=</span><span class="nv">$kCID</span><span class="p">;}}</span><span class="k">if</span><span class="p">(</span><span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span><span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=</span><span class="nv">$kCID</span><span class="p">;}</span><span class="k">if</span><span class="p">(</span><span class="nv">$kCID</span><span class="o">==</span><span class="nv">$egClusterNumber</span><span class="p">){</span><span class="nv">$egClusterNumber</span><span class="o">++</span><span class="p">;}}}</span><span class="nv">$mCluster</span><span class="o">=</span><span class="nv">$egClusterNumber</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nv">$mCFlag</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span><span class="nv">$tid</span><span class="o">=</span><span class="nv">$mC2IDs</span><span class="p">{</span><span class="s">"$mClusterID[$tempi]"</span><span class="p">};</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">defined</span><span class="nv">$tid</span><span class="p">){</span><span class="nv">$tid</span><span class="o">.=</span><span class="s">";$tempi"</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="nv">$tid</span><span class="o">=</span><span class="s">"$tempi"</span><span class="p">;}</span><span class="nv">$mC2IDs</span><span class="p">{</span><span class="s">"$mClusterID[$tempi]"</span><span class="p">}</span><span class="o">=</span><span class="nv">$tid</span><span class="p">;}}</span><span class="nv">$egTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">print</span><span class="s">" [done] [ClusterNum:$mCluster] [Time:"</span><span class="o">.</span><span class="p">(</span><span class="nv">$egTimeNew</span><span class="o">-</span><span class="nv">$egTimeOld</span><span class="p">)</span><span class="o">.</span><span class="s">" seconds]\n"</span><span class="p">;</span>
+<span class="nv">$egTimeOld</span><span class="o">=</span><span class="nv">$egTimeNew</span><span class="p">;</span>
+<span class="k">print</span><span class="s">"Deciding the strand information of each valid MITE ... "</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="k">if</span><span class="p">((</span><span class="nv">$mFlag</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$mCFlag</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$mStrand</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="ow">eq</span><span class="s">""</span><span class="p">)){</span><span class="nv">$mStrand</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=</span><span class="s">"+"</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempj</span><span class="o">=</span><span class="nv">$tempi</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="nv">$tempj</span><span class="o">&lt;</span><span class="nv">$mNum</span><span class="p">;</span><span class="nv">$tempj</span><span class="o">++</span><span class="p">){</span><span class="k">if</span><span class="p">((</span><span class="nv">$mFlag</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$mCFlag</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">]</span><span class="o">==</span><span class="nv">$mClusterID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">])){</span><span class="k">if</span><span class="p">(</span><span class="nb">defined</span><span class="nv">$idxSameStrand</span><span class="p">{</span><span class="nv">$tempi</span><span class="o">.</span><span class="nv">$tempj</span><span class="p">}){</span><span class="nv">$mStrand</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">]</span><span class="o">=</span><span class="s">"+"</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="nv">$mStrand</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">]</span><span class="o">=</span><span class="s">"-"</span><span class="p">;}}}}}</span><span class="nv">$egTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">print</span><span class="s">" [done] [Time:"</span><span class="o">.</span><span class="p">(</span><span class="nv">$egTimeNew</span><span class="o">-</span><span class="nv">$egTimeOld</span><span class="p">)</span><span class="o">.</span><span class="s">" seconds]\n"</span><span class="p">;</span>
+<span class="nv">$egTimeOld</span><span class="o">=</span><span class="nv">$egTimeNew</span><span class="p">;</span>
+<span class="k">print</span><span class="s">"Saving the data ... "</span><span class="p">;</span>
+<span class="nv">$tempj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efOut</span><span class="p">,</span><span class="s">"&gt;$egFileOut\.before_filter"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"Error when saving the predicted MITEs!\n"</span><span class="p">;</span>
+<span class="k">print</span><span class="w"> </span><span class="n">efOut</span><span class="s">"#GID    ID  Cluster Start   End Strand  Length  DR  DRIdent DRLeft  DRRight TIR TIRIdent    TIRLeft TIRRight    DRAT    TIRAT   MITEAT  FDRAT   PreSite PostSite    MITE    TotalScore\n"</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="sr">&lt;$mNum;$tempi++){if(($mCFlag[$tempi]==1)and($mClusterID[$tempi]&gt;</span><span class="mi">0</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$mFlag</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)){</span><span class="nv">$mCopies</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">=~</span><span class="sr">s/\s/,/g</span><span class="p">;</span>
+<span class="k">print</span><span class="w"> </span><span class="n">efOut</span><span class="s">"$mGID[$tempi]   $mID[$tempi]    $mClusterID[$tempi] $mStart[$tempi] $mEnd[$tempi]   $mStrand[$tempi]    $mLength[$tempi]    $mDR[$tempi]    $mDRIdent[$tempi]   $mDRLeft[$tempi]    $mDRRight[$tempi]   $mTIR[$tempi]   $mTIRIdent[$tempi]  $mTIRLeft[$tempi]   $mTIRRight[$tempi]  $mDRAT[$tempi]  $mTIRAT[$tempi] $mMITEAT[$tempi]    $mFDRAT[$tempi] $mPreSite[$tempi]   $mPostSite[$tempi]  $mMITE[$tempi]  $mTotalScore[$tempi]\n"</span><span class="p">;</span>
+<span class="nv">$tempj</span><span class="o">++</span><span class="p">;}}</span><span class="nb">close</span><span class="p">(</span><span class="n">efOut</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="s">"$egDirScript/filterCopyNum.pl \"$egFileOut.before_filter\" \"$egFileOut.filter-1\" $egCutOffCopyNum &gt;/dev/null"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">system</span><span class="p">(</span><span class="s">"$egDirScript/filterSegDup-2.pl \"$egFileOut.filter-1\" \"$egFileOut\" 4 3 &gt;/dev/null"</span><span class="p">)){</span><span class="nb">die</span><span class="s">"-Error when filtering!\n"</span><span class="p">;}</span><span class="nv">$egTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">print</span><span class="s">" [done] [ValidMITENum:$tempj] [Time:"</span><span class="o">.</span><span class="p">(</span><span class="nv">$egTimeNew</span><span class="o">-</span><span class="nv">$egTimeOld</span><span class="p">)</span><span class="o">.</span><span class="s">" seconds]\n"</span><span class="p">;</span>
+<span class="nv">$egTimeOld</span><span class="o">=</span><span class="nv">$egTimeNew</span><span class="p">;</span>
+<span class="k">print</span><span class="s">"Screening for all the MITE copies ... "</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efI</span><span class="p">,</span><span class="s">"$egFileOut"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"Q!\n"</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efO</span><span class="p">,</span><span class="s">"&gt;$egFileOut.before_expansion"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"!!\n"</span><span class="p">;</span>
+<span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="sr">&lt;efI&gt;</span><span class="p">){</span><span class="nv">$tline</span><span class="o">=</span><span class="nv">$_</span><span class="p">;</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">s/[\r\n]//g</span><span class="p">;</span><span class="nv">@tlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/\t/</span><span class="p">,</span><span class="nv">$tline</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">/^#/</span><span class="p">){</span><span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">"$tline\n"</span><span class="p">;}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">@tlist</span><span class="o">&gt;=</span><span class="mi">23</span><span class="p">){</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="nv">$tempi</span><span class="p">;</span>
+<span class="nv">$tlist</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efEScore</span><span class="p">(</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">12</span><span class="p">]);</span>
+<span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">""</span><span class="o">.</span><span class="nb">join</span><span class="p">(</span><span class="s">"\t"</span><span class="p">,</span><span class="nv">@tlist</span><span class="p">)</span><span class="o">.</span><span class="s">"\n"</span><span class="p">;</span>
+<span class="nv">$tempi</span><span class="o">++</span><span class="p">;}}</span><span class="nb">close</span><span class="p">(</span><span class="n">efO</span><span class="p">);</span>
+<span class="nb">close</span><span class="p">(</span><span class="n">efI</span><span class="p">);</span>
+<span class="k">print</span><span class="s">" [BackupMITEs:$tempi]"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tFileTemp</span><span class="o">=</span><span class="s">"$egDirTemp/temp-templates.fasta"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@tGID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tCluster</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tMITEID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tS</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tE</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tStrand</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tDR</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tTIR</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tDRIdent</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tTIRIdent</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tEScore</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@tMITESeq</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$tN</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tMITECopy</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nv">$tempk</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efI</span><span class="p">,</span><span class="s">"$egFileOut.before_expansion"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"E:TemplateGeneration!\n"</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efO</span><span class="p">,</span><span class="s">"&gt;$tFileTemp"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"E:SaveTemplate!\n"</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="sr">&lt;efI&gt;</span><span class="p">){</span><span class="nv">$tline</span><span class="o">=</span><span class="nv">$_</span><span class="p">;</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">s/[\r\n]//g</span><span class="p">;</span><span class="nv">@tlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/\t/</span><span class="p">,</span><span class="nv">$tline</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">/^#/</span><span class="p">){;}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">@tlist</span><span class="o">&gt;=</span><span class="mi">23</span><span class="p">){</span><span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">"&gt;MITE;;$tlist[1];;$tlist[2];;$tlist[7];;$tlist[8];;$tlist[11];;$tlist[12]\n$tlist[21]\n"</span><span class="p">;</span>
+<span class="nv">$tGID</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="nv">$tMITEID</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="nv">$tCluster</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="nv">$tS</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="nv">$tE</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="nv">$tStrand</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="nv">$tDR</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">7</span><span class="p">];</span><span class="nv">$tDRIdent</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="nv">$tTIR</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">11</span><span class="p">];</span><span class="nv">$tTIRIdent</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">12</span><span class="p">];</span>
+<span class="nv">$tEScore</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efEScore</span><span class="p">(</span><span class="nv">$tDR</span><span class="p">[</span><span class="nv">$tN</span><span class="p">],</span><span class="nv">$tTIR</span><span class="p">[</span><span class="nv">$tN</span><span class="p">],</span><span class="nv">$tDRIdent</span><span class="p">[</span><span class="nv">$tN</span><span class="p">],</span><span class="nv">$tTIRIdent</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]);</span><span class="nv">$tMITESeq</span><span class="p">[</span><span class="nv">$tN</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">21</span><span class="p">];</span>
+<span class="nv">$tempk</span><span class="o">++</span><span class="p">;</span><span class="nv">$tN</span><span class="o">++</span><span class="p">;}}</span><span class="nb">close</span><span class="p">(</span><span class="n">efO</span><span class="p">);</span>
+<span class="nb">close</span><span class="p">(</span><span class="n">efI</span><span class="p">);</span>
+<span class="k">print</span><span class="s">" [Templates:$tempk]"</span><span class="p">;</span>
+<span class="nv">$tMITECopy</span><span class="o">=</span><span class="nv">$tN</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tFileSeq</span><span class="o">=</span><span class="s">"$egDirTemp/temp-genome-seq.fasta"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tFileBLAT</span><span class="o">=</span><span class="s">"$egDirTemp/temp-genome-seq.blat-psl.txt"</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="s">"cp \"$egFileSeq\" \"$tFileSeq\""</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">system</span><span class="p">(</span><span class="s">"formatdb -p F -i \"$tFileSeq\""</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">system</span><span class="p">(</span><span class="s">"blat \"$tFileSeq\" \"$tFileTemp\" -minIdentity=95 -minScore=100 \"$tFileBLAT\" 2&gt;&amp;1 1&gt;&gt;\"$egDirTemp/temp-genome-seq.blat.log\" "</span><span class="p">)){</span><span class="nb">die</span><span class="s">"-Error when mapping!\n"</span><span class="p">;}</span><span class="k">print</span><span class="s">" [BLAT]"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@pGID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pS</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pE</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pStrand</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pMID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pMCluster</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pMDR</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pMDRIdent</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pMTIR</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pMTIRIdent</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pMBitScore</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$pN</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efI</span><span class="p">,</span><span class="s">"$tFileBLAT"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"Error!\n"</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="sr">&lt;efI&gt;</span><span class="p">){</span><span class="nv">$tline</span><span class="o">=</span><span class="nv">$_</span><span class="p">;</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">s/[\r\n]//g</span><span class="p">;</span><span class="nv">@tlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/\t/</span><span class="p">,</span><span class="nv">$tline</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">/^#/</span><span class="p">){}</span><span class="k">elsif</span><span class="p">((</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">/^\d+/</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">@tlist</span><span class="o">&gt;=</span><span class="mi">12</span><span class="p">)){</span><span class="k">my</span><span class="nv">$tstrand</span><span class="o">=</span><span class="s">"+"</span><span class="p">;</span>
+<span class="nv">$tstrand</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+<span class="k">my</span><span class="p">(</span><span class="nv">$tmid</span><span class="p">,</span><span class="nv">$tcluster</span><span class="p">,</span><span class="nv">$tmdr</span><span class="p">,</span><span class="nv">$tmdrident</span><span class="p">,</span><span class="nv">$ttir</span><span class="p">,</span><span class="nv">$ttirident</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">=~</span><span class="sr">/^MITE;;(\d+);;(\d+);;(\d+);;([\d\.]+);;(\d+);;([\d\.]+)/</span><span class="p">){(</span><span class="nv">$tmid</span><span class="p">,</span><span class="nv">$tcluster</span><span class="p">,</span><span class="nv">$tmdr</span><span class="p">,</span><span class="nv">$tmdrident</span><span class="p">,</span><span class="nv">$ttir</span><span class="p">,</span><span class="nv">$ttirident</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="nv">$1</span><span class="p">,</span><span class="nv">$2</span><span class="p">,</span><span class="nv">$3</span><span class="p">,</span><span class="nv">$4</span><span class="p">,</span><span class="nv">$5</span><span class="p">,</span><span class="nv">$6</span><span class="p">);}</span><span class="nv">$tid</span><span class="o">=-</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$tN</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="k">if</span><span class="p">((</span><span class="nv">$tGID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="ow">eq</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">13</span><span class="p">])</span><span class="ow">and</span><span class="p">(</span><span class="o">&amp;</span><span class="n">efIsOverlap</span><span class="p">(</span><span class="nv">$tS</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">],</span><span class="nv">$tE</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">16</span><span class="p">])</span><span class="o">==</span><span class="mi">1</span><span class="p">)){</span><span class="nv">$tid</span><span class="o">=-</span><span class="mi">2</span><span class="p">;</span><span class="k">last</span><span class="p">;}}</span><span class="k">if</span><span class="p">(</span><span class="nv">$tid</span><span class="o">==-</span><span class="mi">1</span><span class="p">){</span><span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$pN</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="k">if</span><span class="p">((</span><span class="nv">$pGID</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="ow">eq</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">13</span><span class="p">])</span><span class="ow">and</span><span class="p">(</span><span class="o">&amp;</span><span class="n">efIsOverlap</span><span class="p">(</span><span class="nv">$pS</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">],</span><span class="nv">$pE</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">16</span><span class="p">])</span><span class="o">==</span><span class="mi">1</span><span class="p">)){</span><span class="nv">$tid</span><span class="o">=</span><span class="nv">$tempi</span><span class="p">;</span><span class="k">last</span><span class="p">;}}</span><span class="k">if</span><span class="p">(</span><span class="nv">$tid</span><span class="o">!=-</span><span class="mi">1</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nv">$pMBitScore</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">&lt;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]){</span><span class="nv">$pGID</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">13</span><span class="p">];</span><span class="nv">$pS</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">15</span><span class="p">];</span><span class="nv">$pE</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="nv">$pStrand</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tstrand</span><span class="p">;</span>
+<span class="nv">$pMID</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tmid</span><span class="p">;</span><span class="nv">$pMCluster</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tcluster</span><span class="p">;</span><span class="nv">$pMDR</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tmdr</span><span class="p">;</span><span class="nv">$pMDRIdent</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tmdrident</span><span class="p">;</span><span class="nv">$pMTIR</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$ttir</span><span class="p">;</span><span class="nv">$pMTIRIdent</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$ttirident</span><span class="p">;</span>
+<span class="nv">$pMBitScore</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">0</span><span class="p">];}}</span><span class="k">else</span><span class="p">{</span><span class="nv">$tid</span><span class="o">=</span><span class="nv">$pN</span><span class="p">;</span>
+<span class="nv">$pGID</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">13</span><span class="p">];</span><span class="nv">$pS</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">15</span><span class="p">];</span><span class="nv">$pE</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">16</span><span class="p">];</span><span class="nv">$pStrand</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tstrand</span><span class="p">;</span>
+<span class="nv">$pMID</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tmid</span><span class="p">;</span><span class="nv">$pMCluster</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tcluster</span><span class="p">;</span><span class="nv">$pMDR</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tmdr</span><span class="p">;</span><span class="nv">$pMDRIdent</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tmdrident</span><span class="p">;</span><span class="nv">$pMTIR</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$ttir</span><span class="p">;</span><span class="nv">$pMTIRIdent</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$ttirident</span><span class="p">;</span>
+<span class="nv">$pMBitScore</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="nv">$pN</span><span class="o">++</span><span class="p">;}}}}</span><span class="nb">close</span><span class="p">(</span><span class="n">efI</span><span class="p">);</span>
+<span class="k">print</span><span class="s">" [OtherCopy:$pN]"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@pSeqL</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pSeqM</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">@pSeqR</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">%pGID2ID</span><span class="o">=</span><span class="p">();</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$pN</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span><span class="nb">goto</span><span class="w"> </span><span class="n">labelNoExpanding</span><span class="p">;}</span><span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$pN</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="nv">$tid</span><span class="o">=</span><span class="nv">$pGID2ID</span><span class="p">{</span><span class="s">"$pGID[$tempi]"</span><span class="p">};</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">defined</span><span class="nv">$tid</span><span class="p">){</span><span class="nv">$tid</span><span class="o">.=</span><span class="s">";$tempi"</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="nv">$tid</span><span class="o">=</span><span class="s">"$tempi"</span><span class="p">;}</span><span class="nv">$pGID2ID</span><span class="p">{</span><span class="s">"$pGID[$tempi]"</span><span class="p">}</span><span class="o">=</span><span class="nv">$tid</span><span class="p">;}</span><span class="nv">$egSeqObj</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="nn">Bio::</span><span class="n">SeqIO</span><span class="p">(</span><span class="o">-</span><span class="n">file</span><span class="o">=&gt;</span><span class="s">"$egFileSeq"</span><span class="p">,</span><span class="o">-</span><span class="nb">format</span><span class="o">=&gt;</span><span class="s">"fasta"</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="k">my</span><span class="nv">$egSeqO</span><span class="o">=</span><span class="nv">$egSeqObj</span><span class="o">-&gt;</span><span class="n">next_seq</span><span class="p">){</span><span class="k">my</span><span class="p">(</span><span class="nv">$ppID</span><span class="p">,</span><span class="nv">$ppSeq</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="nv">$egSeqO</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">,</span><span class="nv">$egSeqO</span><span class="o">-&gt;</span><span class="n">seq</span><span class="p">);</span>
+<span class="nv">$tline</span><span class="o">=</span><span class="nv">$pGID2ID</span><span class="p">{</span><span class="s">"$ppID"</span><span class="p">};</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">defined</span><span class="nv">$tline</span><span class="p">){</span><span class="nv">@tlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/;/</span><span class="p">,</span><span class="nv">$tline</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempj</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempj</span><span class="o">&lt;</span><span class="nv">@tlist</span><span class="p">;</span><span class="nv">$tempj</span><span class="o">++</span><span class="p">){</span><span class="nv">$tid</span><span class="o">=</span><span class="nv">$tlist</span><span class="p">[</span><span class="nv">$tempj</span><span class="p">];</span>
+<span class="nv">$pSeqL</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$ppSeq</span><span class="p">,</span><span class="nv">$pS</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="nv">$gFixedFlanking</span><span class="p">,</span><span class="nv">$gFixedFlanking</span><span class="p">);</span>
+<span class="nv">$pSeqM</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$ppSeq</span><span class="p">,</span><span class="nv">$pS</span><span class="p">[</span><span class="nv">$tid</span><span class="p">],</span><span class="nb">abs</span><span class="p">(</span><span class="nv">$pE</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">-</span><span class="nv">$pS</span><span class="p">[</span><span class="nv">$tid</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$pStrand</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="ow">ne</span><span class="s">"+"</span><span class="p">){</span><span class="nv">$pSeqM</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efDNA_RC</span><span class="p">(</span><span class="nv">$pSeqM</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]);}</span><span class="nv">$pSeqR</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">=</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$ppSeq</span><span class="p">,</span><span class="nv">$pE</span><span class="p">[</span><span class="nv">$tid</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="nv">$gFixedFlanking</span><span class="p">);}}}</span><span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="s">"cp \"$egFileOut.before_expansion\" \"$egFileOut.be-filter1\""</span><span class="p">)){</span><span class="nb">die</span><span class="s">"-Error!\n"</span><span class="p">;}</span><span class="nb">open</span><span class="p">(</span><span class="n">efO</span><span class="p">,</span><span class="s">"&gt;&gt;$egFileOut.be-filter1"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"E:Expansion!\n"</span><span class="p">;</span>
+<span class="nv">$tempk</span><span class="o">=</span><span class="nv">$tN</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$tempi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">&lt;</span><span class="nv">$pN</span><span class="p">;</span><span class="nv">$tempi</span><span class="o">++</span><span class="p">){</span><span class="nv">$tempk</span><span class="o">++</span><span class="p">;</span>
+<span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">"$pGID[$tempi] $tempk  $pMCluster[$tempi]  $pS[$tempi] $pE[$tempi] $pStrand[$tempi]    "</span><span class="o">.</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="nv">$pE</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">-</span><span class="nv">$pS</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="s">"    $mDR[$tempi]    0           $pMTIR[$tempi]  0           0   0   0   0   "</span><span class="o">.</span><span class="p">(</span><span class="nv">$pSeqL</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">.</span><span class="nv">$pSeqR</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">])</span><span class="o">.</span><span class="s">" "</span><span class="o">.</span><span class="p">(</span><span class="nv">$pSeqL</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">.</span><span class="nv">$pSeqR</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">])</span><span class="o">.</span><span class="s">" "</span><span class="o">.</span><span class="nv">$pSeqM</span><span class="p">[</span><span class="nv">$tempi</span><span class="p">]</span><span class="o">.</span><span class="s">"  0\n"</span><span class="p">;}</span><span class="nb">close</span><span class="p">(</span><span class="n">efO</span><span class="p">);</span>
+<span class="k">print</span><span class="s">" [AllCopySaved:$tempk]"</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="s">"\"$egDirScript/refineBoundary.pl\" \"$egDirTemp\" $gMutationRate \"$tFileSeq\" \"$egFileOut.be-filter1\" \"$egFileOut.be-filter2\" 2&gt;/dev/null 1&gt;/dev/null"</span><span class="p">)){</span><span class="k">print</span><span class="s">"\"$egDirScript/refineBoundary.pl\" \"$egDirTemp\" $gMutationRate \"$tFileSeq\" \"$egFileOut.be-filter1\" \"$egFileOut.be-filter2\"\n"</span><span class="p">;</span>
+<span class="nb">die</span><span class="s">"-Error when refineBoundary!\n"</span><span class="p">;}</span><span class="k">print</span><span class="s">" [Boundary Refined]"</span><span class="p">;</span>
+<span class="n">labelNoExpanding:</span>
+<span class="k">my</span><span class="p">(</span><span class="nv">$tF</span><span class="p">,</span><span class="nv">$tP</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$pN</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span><span class="nb">open</span><span class="p">(</span><span class="n">efI</span><span class="p">,</span><span class="s">"$egFileOut.before_expansion"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"E!\n"</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="nb">open</span><span class="p">(</span><span class="n">efI</span><span class="p">,</span><span class="s">"$egFileOut.be-filter2"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"E!\n"</span><span class="p">;}</span><span class="nb">open</span><span class="p">(</span><span class="n">efO</span><span class="p">,</span><span class="s">"&gt;$egFileOut"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"Q!\n"</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="sr">&lt;efI&gt;</span><span class="p">){</span><span class="nv">$tline</span><span class="o">=</span><span class="nv">$_</span><span class="p">;</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">s/[\r\n]//g</span><span class="p">;</span><span class="nv">@tlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/\t/</span><span class="p">,</span><span class="nv">$tline</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">/^#/</span><span class="p">){</span><span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">"$tline   Copy status\n"</span><span class="p">;}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">@tlist</span><span class="o">&gt;=</span><span class="mi">23</span><span class="p">){</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">22</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efEScore</span><span class="p">(</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">12</span><span class="p">]);</span>
+<span class="nv">$tlist</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">if</span><span class="p">((</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">&gt;=</span><span class="nv">$gMutationRate</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">&gt;=</span><span class="nv">$gMutationRate</span><span class="p">)){</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span><span class="o">=</span><span class="s">"Full Copy"</span><span class="p">;</span><span class="nv">$tF</span><span class="o">++</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">23</span><span class="p">]</span><span class="o">=</span><span class="s">"Partial Copy"</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">13</span><span class="p">]</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">14</span><span class="p">]</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tlist</span><span class="p">[</span><span class="mi">16</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$tP</span><span class="o">++</span><span class="p">;}</span><span class="k">print</span><span class="w"> </span><span class="n">efO</span><span class="s">""</span><span class="o">.</span><span class="nb">join</span><span class="p">(</span><span class="s">"\t"</span><span class="p">,</span><span class="nv">@tlist</span><span class="p">)</span><span class="o">.</span><span class="s">"\n"</span><span class="p">;}}</span><span class="nb">close</span><span class="p">(</span><span class="n">efO</span><span class="p">);</span>
+<span class="nb">close</span><span class="p">(</span><span class="n">efI</span><span class="p">);</span>
+<span class="k">print</span><span class="s">" [Full:$tF] [Partial:$tP]"</span><span class="p">;</span>
+<span class="k">print</span><span class="s">" [done]\n"</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="s">"rm -rf \"$egDirTemp\""</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">system</span><span class="p">(</span><span class="s">"rm -rf \"$egFileOut.before_filter\""</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">system</span><span class="p">(</span><span class="s">"rm -rf \"$egFileOut.filter-1\""</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">system</span><span class="p">(</span><span class="s">"rm -rf *.log"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">system</span><span class="p">(</span><span class="s">"rm -rf \"$egFileOut.before_expansion\""</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">system</span><span class="p">(</span><span class="s">"rm -rf \"$egFileOut.be-filter1\""</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">system</span><span class="p">(</span><span class="s">"rm -rf \"$egFileOut.be-filter2\""</span><span class="p">)){</span><span class="k">print</span><span class="s">"---Error when removing the temporary files!\n"</span><span class="p">;}</span><span class="k">my</span><span class="nv">$qMITENum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$qClusterNum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nv">%tidx</span><span class="o">=</span><span class="p">();</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">efI</span><span class="p">,</span><span class="s">"$egFileOut"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"E!\n"</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="sr">&lt;efI&gt;</span><span class="p">){</span><span class="nv">$tline</span><span class="o">=</span><span class="nv">$_</span><span class="p">;</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">s/[\r\n]//g</span><span class="p">;</span><span class="nv">@tlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/\t/</span><span class="p">,</span><span class="nv">$tline</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">/^#/</span><span class="p">){}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">@tlist</span><span class="o">&gt;=</span><span class="mi">5</span><span class="p">){</span><span class="nv">$qMITENum</span><span class="o">++</span><span class="p">;</span>
+<span class="nv">$tidx</span><span class="p">{</span><span class="s">"$tlist[2]"</span><span class="p">}</span><span class="o">=</span><span class="mi">1</span><span class="p">;}}</span><span class="nv">$qClusterNum</span><span class="o">=</span><span class="nb">scalar</span><span class="w"> </span><span class="nb">keys</span><span class="nv">%tidx</span><span class="p">;</span>
+<span class="nb">close</span><span class="p">(</span><span class="n">efI</span><span class="p">);</span>
+<span class="k">print</span><span class="s">"There are $qMITENum MITEs detected in $qClusterNum clusters.\n"</span><span class="p">;</span>
+<span class="vg">$|</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">sub</span><span class="w"> </span><span class="nf">efEScore</span><span class="p">{</span><span class="k">my</span><span class="p">(</span><span class="nv">$adDR</span><span class="p">,</span><span class="nv">$adTIR</span><span class="p">,</span><span class="nv">$adIdentDR</span><span class="p">,</span><span class="nv">$adIdentTIR</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$adWeightIdent</span><span class="o">=</span><span class="mi">20</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$adWeightDR</span><span class="o">=</span><span class="mi">2</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$adEScore</span><span class="o">=</span><span class="nv">$adIdentDR</span><span class="o">*</span><span class="nv">$adDR</span><span class="o">*</span><span class="nv">$adWeightDR</span><span class="o">+</span><span class="nv">$adIdentTIR</span><span class="o">*</span><span class="nv">$adTIR</span><span class="p">;</span>
+<span class="k">return</span><span class="nv">$adEScore</span><span class="p">;}</span><span class="k">sub</span><span class="w"> </span><span class="nf">efLoadMUST</span><span class="p">{</span><span class="k">my</span><span class="p">(</span><span class="nv">$tFileDat</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+<span class="nv">%mData</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$tStartID</span><span class="o">=</span><span class="nv">$mNum</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tNowNum</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">tIn</span><span class="p">,</span><span class="s">"$tFileDat"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"Error when loading the Dat!\n"</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="sr">&lt;tIn&gt;</span><span class="p">){</span><span class="nv">$tline</span><span class="o">=</span><span class="nv">$_</span><span class="p">;</span>
+<span class="nv">$tline</span><span class="o">=~</span><span class="sr">s/[\r\n]//g</span><span class="p">;</span>
+<span class="k">my</span><span class="p">(</span><span class="nv">$ppp</span><span class="p">,</span><span class="nv">$qqq</span><span class="p">)</span><span class="o">=</span><span class="p">(</span><span class="s">""</span><span class="p">,</span><span class="s">""</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">/^\/\/$/</span><span class="p">){</span><span class="nv">$egID</span><span class="o">=</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"GID"</span><span class="p">};</span>
+<span class="nv">$mData</span><span class="p">{</span><span class="s">"SEQID"</span><span class="p">}</span><span class="o">=</span><span class="nv">$egID</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@ttlist</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$tNowID</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"ID"</span><span class="p">});</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tNowID</span><span class="o">=~</span><span class="sr">/^\d+$/</span><span class="p">){</span><span class="nv">$mMITE2ID</span><span class="p">{</span><span class="s">"$egID $tNowID"</span><span class="p">}</span><span class="o">=</span><span class="nv">$mNum</span><span class="p">;</span>
+<span class="nv">$mID</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$tNowID</span><span class="p">);</span>
+<span class="nv">$mGID</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$egID</span><span class="p">);</span>
+<span class="p">(</span><span class="nv">$ppp</span><span class="p">,</span><span class="nv">$qqq</span><span class="p">)</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/;;/</span><span class="p">,</span><span class="nv">$mGID</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">],</span><span class="mi">2</span><span class="p">);</span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nb">defined</span><span class="nv">$qqq</span><span class="p">)){</span><span class="nv">$qqq</span><span class="o">=</span><span class="nv">$ppp</span><span class="p">;</span><span class="nv">$ppp</span><span class="o">=</span><span class="mi">0</span><span class="p">;}</span><span class="nv">$mGID</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=</span><span class="nv">$qqq</span><span class="p">;</span>
+<span class="nv">@ttlist</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">/-/</span><span class="p">,</span><span class="o">&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"POSITION"</span><span class="p">}),</span><span class="mi">2</span><span class="p">);</span>
+<span class="nv">$mStart</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=</span><span class="nv">$ppp</span><span class="o">+&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$ttlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="nv">$mEnd</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=</span><span class="nv">$ppp</span><span class="o">+&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$ttlist</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="nb">defined</span><span class="nv">$egExistCopy</span><span class="p">{</span><span class="s">"$mGID[$mNum]|$mStart[$mNum]-$mEnd[$mNum]"</span><span class="p">})){</span><span class="nv">$mStrand</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="nv">$mLength</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="nv">$mEnd</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">-</span><span class="nv">$mStart</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">])</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="nv">$mDR</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"DR"</span><span class="p">});</span>
+<span class="nv">$mDRIdent</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"DRIDENT"</span><span class="p">});</span>
+<span class="nv">$mDRLeft</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"DRLEFT"</span><span class="p">});</span>
+<span class="nv">$mDRRight</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"DRRIGHT"</span><span class="p">});</span>
+<span class="nv">$mTIR</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"TIR"</span><span class="p">});</span>
+<span class="nv">$mTIRIdent</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"TIRIDENT"</span><span class="p">});</span>
+<span class="nv">$mTIRLeft</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"TIRLEFT"</span><span class="p">});</span>
+<span class="nv">$mTIRRight</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"TIRRIGHT"</span><span class="p">});</span>
+<span class="nv">$mDRAT</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"DRAT"</span><span class="p">});</span>
+<span class="nv">$mTIRAT</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"TIRAT"</span><span class="p">});</span>
+<span class="nv">$mMITEAT</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"MITEAT"</span><span class="p">});</span>
+<span class="nv">$mFDRAT</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"FDRAT"</span><span class="p">});</span>
+<span class="nv">$mPreSite</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"PRESITE"</span><span class="p">});</span>
+<span class="nv">$mPostSite</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"POSTSITE"</span><span class="p">});</span>
+<span class="nv">$mMITE</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"MITE"</span><span class="p">});</span>
+<span class="nv">$mTotalScore</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=&amp;</span><span class="n">efEScore</span><span class="p">(</span><span class="nv">$mDR</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">],</span><span class="nv">$mTIR</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">],</span><span class="nv">$mDRIdent</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">],</span><span class="nv">$mTIRIdent</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]);</span>
+<span class="nv">$mCopyNum</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="nv">$mCopies</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=</span><span class="s">"$mNum"</span><span class="p">;</span>
+<span class="nv">$mFlag</span><span class="p">[</span><span class="nv">$mNum</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="nv">$egExistCopy</span><span class="p">{</span><span class="s">"$mGID[$mNum]|$mStart[$mNum]-$mEnd[$mNum]"</span><span class="p">}</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="nv">$tNowNum</span><span class="o">++</span><span class="p">;</span>
+<span class="nv">$mNum</span><span class="o">++</span><span class="p">;}}}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">$tline</span><span class="o">=~</span><span class="sr">/^([a-zA-Z]+)\t(.*)$/</span><span class="p">){</span><span class="k">my</span><span class="nv">$tID</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$1</span><span class="p">);</span>
+<span class="k">my</span><span class="nv">$tDat</span><span class="o">=&amp;</span><span class="n">efValidString</span><span class="p">(</span><span class="nv">$2</span><span class="p">);</span>
+<span class="k">if</span><span class="p">((</span><span class="nv">$tID</span><span class="w"> </span><span class="ow">ne</span><span class="s">""</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$tDat</span><span class="w"> </span><span class="ow">ne</span><span class="s">""</span><span class="p">)){</span><span class="nv">$mData</span><span class="p">{</span><span class="s">"$tID"</span><span class="p">}</span><span class="o">=</span><span class="nv">$tDat</span><span class="p">;}}}</span><span class="nb">close</span><span class="p">(</span><span class="n">tIn</span><span class="p">);</span>
+<span class="k">return</span><span class="nv">$tNowNum</span><span class="p">;}</span><span class="k">sub</span><span class="w"> </span><span class="nf">efPTMUST</span><span class="p">{</span><span class="k">my</span><span class="p">(</span><span class="nv">$tmPID</span><span class="p">,</span><span class="nv">$tmFileSeq</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tmgTimeOld</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tmSeqObj</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="nn">Bio::</span><span class="n">SeqIO</span><span class="p">(</span><span class="o">-</span><span class="n">file</span><span class="o">=&gt;</span><span class="s">"$tmFileSeq"</span><span class="p">,</span><span class="o">-</span><span class="nb">format</span><span class="o">=&gt;</span><span class="s">"fasta"</span><span class="p">);</span>
+<span class="k">while</span><span class="p">(</span><span class="k">my</span><span class="nv">$tmSeqO</span><span class="o">=</span><span class="nv">$tmSeqObj</span><span class="o">-&gt;</span><span class="n">next_seq</span><span class="p">){</span><span class="k">my</span><span class="nv">$tmTimeOld</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$ttmSeq</span><span class="o">=</span><span class="nv">$tmSeqO</span><span class="o">-&gt;</span><span class="n">seq</span><span class="p">;</span><span class="k">my</span><span class="nv">$tmSeq</span><span class="o">=</span><span class="s">"\U$ttmSeq\E"</span><span class="p">;</span><span class="k">my</span><span class="nv">$tmID</span><span class="o">=</span><span class="nv">$tmSeqO</span><span class="o">-&gt;</span><span class="n">id</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tmFile</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="k">my</span><span class="nv">$tmFSeq</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="k">my</span><span class="nv">$tmCmdLine</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="k">my</span><span class="nv">$tmFileDat</span><span class="o">=</span><span class="s">""</span><span class="p">;</span><span class="k">my</span><span class="nv">$tmFileTIR</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="nv">$tmFSeq</span><span class="o">=&amp;</span><span class="n">efFormatSeq</span><span class="p">(</span><span class="nv">$tmSeq</span><span class="p">,</span><span class="nv">$egLineLength</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="nv">$tmFSeq</span><span class="o">=~</span><span class="sr">s/ +//g</span><span class="p">;</span>
+<span class="nv">$tmFile</span><span class="o">=</span><span class="s">"$egDirTemp/$tmPID.temp_seq.raw"</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">tmOut</span><span class="p">,</span><span class="s">"&gt;$tmFile"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"Error when saving the temporary sequence!\n"</span><span class="p">;</span>
+<span class="k">print</span><span class="w"> </span><span class="n">tmOut</span><span class="s">"$tmFSeq\n"</span><span class="p">;</span>
+<span class="nb">close</span><span class="p">(</span><span class="n">tmOut</span><span class="p">);</span>
+<span class="nv">$tmFileDat</span><span class="o">=</span><span class="s">"$egDirTemp/$tmPID.temp_seq.dat"</span><span class="p">;</span><span class="nv">$tmFileTIR</span><span class="o">=</span><span class="s">"$egDirTemp/$tmPID.temp_tir.dat"</span><span class="p">;</span>
+<span class="nv">$tmCmdLine</span><span class="o">=</span><span class="s">"\"$egDirScript\/$egScriptMUST\" \"$tmFile\" \"$tmID\" \"$tmFileDat.before_filter\" \"$tmFileTIR\" $gMinTIR $gMaxTIR $gMinDR $gMaxDR $gMinMITE $gMaxMITE $gFixedFlanking $gMutationRate"</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="s">"$tmCmdLine &gt;/dev/null"</span><span class="p">)){</span><span class="nb">die</span><span class="s">"-Error occurred when running the script \"$egDirScript\/$egScriptMUST\"!\n"</span><span class="p">;}</span><span class="nv">$tmCmdLine</span><span class="o">=</span><span class="s">"\"$egDirScript/$egScriptFilter\" \"$tmFileDat.before_filter\" \"$tmFileDat\""</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="s">"$tmCmdLine 2&gt;/dev/null 1&gt;/dev/null"</span><span class="p">)){</span><span class="nb">die</span><span class="s">"-Error occurred when running the script \"$egDirScript\/$egScriptFilter\"!\n"</span><span class="p">;}}</span><span class="k">my</span><span class="nv">$tmgTimeNew</span><span class="o">=</span><span class="sb">`date +%s`</span><span class="p">;}</span><span class="k">sub</span><span class="w"> </span><span class="nf">efValidString</span><span class="p">{</span><span class="k">my</span><span class="p">(</span><span class="nv">$tStr</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+<span class="k">if</span><span class="p">((</span><span class="nb">defined</span><span class="nv">$tStr</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$tStr</span><span class="w"> </span><span class="ow">ne</span><span class="s">""</span><span class="p">)){</span><span class="k">return</span><span class="nv">$tStr</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="k">return</span><span class="s">""</span><span class="p">;}}</span><span class="k">sub</span><span class="w"> </span><span class="nf">efSyntax</span><span class="p">{</span><span class="k">my</span><span class="nv">$egSyntax</span><span class="o">=</span><span class="n">decode_base64</span><span class="p">(</span><span class="s">"TUlURSBVbmNvdmVyaW5nIFN5c1RlbSAgICB2ZXJzaW9uIDIuNC4wMDEKLS0tLS0tLS0tLS0tLS0t</span>
+<span class="s">LS0tLS0tKGMpIEZlbmdmZW5nIFpob3UgKEZlbmdmZW5nWmhvdUBnbWFpbC5jb20pIDIwMTMtMTIt</span>
+<span class="s">MjgKLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t</span>
+<span class="s">LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCi4vTVVTVF9QaXBlLnBsIDxpbnB1dC5mYXN0YT4g</span>
+<span class="s">PG91dHB1dC5NSVRFLmRhdD4gPERpclRlbXA+IFtvcHRpb25zXQpOb3RlOgpJZiBhbnkgb3B0aW9u</span>
+<span class="s">cyBhcmUgcHJvdmlkZWQsIHRoZSB1c2VyIGhhdmUgdG8gaW5wdXQgdGhlIHZhbHVlcyBmb3IgYWxs</span>
+<span class="s">IHRoZSBvcHRpb25zLgpPcHRpb24gbGlzdDoKLTxUaHJlYWRfTnVtPiAgICAgICAgICAgICBbMTBd</span>
+<span class="s">Ci08TUlOX1RJUl9sZW5ndGg+ICAgICAgICAgWzhdCi08TUFYX1RJUl9sZW5ndGg+ICAgICAgICAg</span>
+<span class="s">WzUwXQotPE1JTl9EUl9sZW5ndGg+ICAgICAgICAgIFsyXQotPE1BWF9EUl9sZW5ndGg+ICAgICAg</span>
+<span class="s">ICAgIFszMF0KLTxNSU5fTUlURV9sZW5ndGg+ICAgICAgICBbMTAwXQotPE1BWF9NSVRFX2xlbmd0</span>
+<span class="s">aD4gICAgICAgIFs2MDBdCi08RklYRURfRkxBTktJTkdfbGVuZ3RoPiAgWzUwXQotPE11dGF0aW9u</span>
+<span class="s">X1JhdGU+ICAgICAgICAgIFswLjgwXQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t</span>
+<span class="s">LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQo="</span>
+<span class="p">);</span>
+<span class="k">print</span><span class="nv">$egSyntax</span><span class="p">;}</span><span class="k">sub</span><span class="w"> </span><span class="nf">efFormatSeq</span><span class="p">{</span><span class="k">my</span><span class="p">(</span><span class="nv">$fSeq</span><span class="p">,</span><span class="nv">$tBlock</span><span class="p">,</span><span class="nv">$tNumber</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tPos</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tRSeq</span><span class="o">=</span><span class="s">""</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span><span class="k">my</span><span class="nv">$tStart</span><span class="o">=</span><span class="nv">$tBlock</span><span class="o">*</span><span class="nv">$tPos</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$tEnd</span><span class="o">=</span><span class="nv">$tBlock</span><span class="o">*</span><span class="p">(</span><span class="nv">$tPos</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$tStart</span><span class="o">&gt;=</span><span class="nb">length</span><span class="p">(</span><span class="nv">$fSeq</span><span class="p">)){</span><span class="k">last</span><span class="p">;}</span><span class="k">if</span><span class="p">(</span><span class="nv">$tEnd</span><span class="o">&gt;=</span><span class="nb">length</span><span class="p">(</span><span class="nv">$fSeq</span><span class="p">)){</span><span class="nv">$tEnd</span><span class="o">=</span><span class="nb">length</span><span class="p">(</span><span class="nv">$fSeq</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">;}</span><span class="nv">$tRSeq</span><span class="o">=</span><span class="nv">$tRSeq</span><span class="o">.</span><span class="nb">substr</span><span class="p">(</span><span class="nv">$fSeq</span><span class="p">,</span><span class="nv">$tStart</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="nv">$tEnd</span><span class="o">-</span><span class="nv">$tStart</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="s">" "</span><span class="p">;</span>
+<span class="k">if</span><span class="p">((</span><span class="nv">$tPos</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$tPos%$tNumber</span><span class="o">==</span><span class="mi">0</span><span class="p">)){</span><span class="nv">$tRSeq</span><span class="o">=</span><span class="nv">$tRSeq</span><span class="o">.</span><span class="s">"\n     "</span><span class="p">;}</span><span class="nv">$tPos</span><span class="o">++</span><span class="p">;}</span><span class="nv">$tRSeq</span><span class="o">=~</span><span class="sr">s/^ +//g</span><span class="p">;</span>
+<span class="nv">$tRSeq</span><span class="o">=~</span><span class="sr">s/ +$//g</span><span class="p">;</span>
+<span class="nv">$tRSeq</span><span class="o">=</span><span class="s">"     "</span><span class="o">.</span><span class="nv">$tRSeq</span><span class="p">;</span>
+<span class="k">return</span><span class="nv">$tRSeq</span><span class="p">;}</span><span class="k">sub</span><span class="w"> </span><span class="nf">efIsOverlap</span><span class="p">{</span><span class="k">my</span><span class="p">(</span><span class="nv">$s1</span><span class="p">,</span><span class="nv">$e1</span><span class="p">,</span><span class="nv">$s2</span><span class="p">,</span><span class="nv">$e2</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$t</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$s1</span><span class="o">&gt;</span><span class="nv">$e1</span><span class="p">){</span><span class="nv">$t</span><span class="o">=</span><span class="nv">$s1</span><span class="p">;</span>
+<span class="nv">$s1</span><span class="o">=</span><span class="nv">$e1</span><span class="p">;</span>
+<span class="nv">$e1</span><span class="o">=</span><span class="nv">$t</span><span class="p">;}</span><span class="k">if</span><span class="p">(</span><span class="nv">$s2</span><span class="o">&gt;</span><span class="nv">$e2</span><span class="p">){</span><span class="nv">$t</span><span class="o">=</span><span class="nv">$s2</span><span class="p">;</span>
+<span class="nv">$s2</span><span class="o">=</span><span class="nv">$e2</span><span class="p">;</span>
+<span class="nv">$e2</span><span class="o">=</span><span class="nv">$t</span><span class="p">;}</span><span class="k">if</span><span class="p">(((</span><span class="nv">$s2</span><span class="o">&gt;=</span><span class="nv">$s1</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$s2</span><span class="sr">&lt;=$e1))or(($s1&gt;</span><span class="o">=</span><span class="nv">$s2</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$s1</span><span class="o">&lt;=</span><span class="nv">$e2</span><span class="p">))){</span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;}}</span><span class="k">sub</span><span class="w"> </span><span class="nf">efIsSameStrand</span><span class="p">{</span><span class="k">my</span><span class="p">(</span><span class="nv">$iSeq1</span><span class="p">,</span><span class="nv">$iSeq2</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+<span class="k">if</span><span class="p">((</span><span class="nb">length</span><span class="p">(</span><span class="nv">$iSeq1</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nb">length</span><span class="p">(</span><span class="nv">$iSeq2</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)){</span><span class="k">my</span><span class="nv">$iF1</span><span class="o">=</span><span class="s">"$egDirTemp/seq1.fasta"</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">iO</span><span class="p">,</span><span class="s">"&gt;$iF1"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"Error when saving sequence 1\n"</span><span class="p">;</span>
+<span class="k">print</span><span class="w"> </span><span class="n">iO</span><span class="s">"&gt;Query\n$iSeq1\n"</span><span class="p">;</span>
+<span class="nb">close</span><span class="p">(</span><span class="n">iO</span><span class="p">);</span>
+<span class="k">my</span><span class="nv">$iF2</span><span class="o">=</span><span class="s">"$egDirTemp/seq2.fasta"</span><span class="p">;</span>
+<span class="nb">open</span><span class="p">(</span><span class="n">iO</span><span class="p">,</span><span class="s">"&gt;$iF2"</span><span class="p">)</span><span class="ow">or</span><span class="w"> </span><span class="nb">die</span><span class="s">"Error when saving sequence 2\n"</span><span class="p">;</span>
+<span class="k">print</span><span class="w"> </span><span class="n">iO</span><span class="s">"&gt;DB\n$iSeq2\n"</span><span class="p">;</span>
+<span class="nb">close</span><span class="p">(</span><span class="n">iO</span><span class="p">);</span>
+<span class="k">my</span><span class="nv">$iFO</span><span class="o">=</span><span class="s">"$egDirTemp/seq.bl2seq.dat"</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">$iCmdLine</span><span class="o">=</span><span class="s">"bl2seq -p blastn -i \"$iF1\" -j \"$iF2\" -o $iFO"</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nb">system</span><span class="p">(</span><span class="nv">$iCmdLine</span><span class="p">)){</span><span class="k">print</span><span class="s">"-Error when running bl2seq!\n"</span><span class="p">;</span>
+<span class="k">return</span><span class="o">-</span><span class="mi">1</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="k">my</span><span class="nv">$iSearchIO</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="nn">Bio::</span><span class="n">SearchIO</span><span class="p">(</span><span class="o">-</span><span class="n">file</span><span class="o">=&gt;</span><span class="s">"$iFO"</span><span class="p">,</span><span class="o">-</span><span class="nb">format</span><span class="o">=&gt;</span><span class="s">"blast"</span><span class="p">);</span>
+<span class="k">my</span><span class="nv">$iFlag</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="p">(</span><span class="k">my</span><span class="nv">$iResult</span><span class="o">=</span><span class="nv">$iSearchIO</span><span class="o">-&gt;</span><span class="n">next_result</span><span class="p">){</span><span class="k">my</span><span class="nv">$iNameQ</span><span class="o">=</span><span class="nv">$iResult</span><span class="o">-&gt;</span><span class="n">query_name</span><span class="p">();</span>
+<span class="k">while</span><span class="p">(</span><span class="k">my</span><span class="nv">$iHit</span><span class="o">=</span><span class="nv">$iResult</span><span class="o">-&gt;</span><span class="n">next_hit</span><span class="p">){</span><span class="k">my</span><span class="nv">$iNameH</span><span class="o">=</span><span class="nv">$iHit</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">();</span>
+<span class="k">while</span><span class="p">(</span><span class="k">my</span><span class="nv">$iHSP</span><span class="o">=</span><span class="nv">$iHit</span><span class="o">-&gt;</span><span class="n">next_hsp</span><span class="p">){</span><span class="k">my</span><span class="nv">$iStrandQ</span><span class="o">=</span><span class="nv">$iHSP</span><span class="o">-&gt;</span><span class="n">strand</span><span class="p">(</span><span class="s">'query'</span><span class="p">);</span>
+<span class="k">my</span><span class="nv">$iStrandH</span><span class="o">=</span><span class="nv">$iHSP</span><span class="o">-&gt;</span><span class="n">strand</span><span class="p">(</span><span class="s">'hit'</span><span class="p">);</span>
+<span class="k">if</span><span class="p">((</span><span class="nv">$iStrandQ</span><span class="w"> </span><span class="ow">eq</span><span class="nv">$iStrandH</span><span class="p">)</span><span class="ow">and</span><span class="p">(</span><span class="nv">$iStrandQ</span><span class="w"> </span><span class="ow">ne</span><span class="s">""</span><span class="p">)){</span><span class="nv">$iFlag</span><span class="o">=</span><span class="mi">1</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="nv">$iFlag</span><span class="o">=</span><span class="mi">0</span><span class="p">;}</span><span class="nb">goto</span><span class="w"> </span><span class="n">lbGotIt</span><span class="p">;}}}</span><span class="n">lbGotIt:return</span><span class="nv">$iFlag</span><span class="p">;}}</span><span class="k">else</span><span class="p">{</span><span class="k">return</span><span class="o">-</span><span class="mi">1</span><span class="p">;}}</span><span class="k">sub</span><span class="w"> </span><span class="nf">efPrintData</span><span class="p">{</span><span class="k">my</span><span class="p">(</span><span class="nv">%pIdx</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@pKeys</span><span class="o">=</span><span class="nb">keys</span><span class="nv">%pIdx</span><span class="p">;</span>
+<span class="k">for</span><span class="p">(</span><span class="k">my</span><span class="nv">$pi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$pi</span><span class="o">&lt;</span><span class="nv">@pKeys</span><span class="p">;</span><span class="nv">$pi</span><span class="o">++</span><span class="p">){</span><span class="k">print</span><span class="s">"--[$pKeys[$pi]] =&gt; ["</span><span class="o">.</span><span class="nv">$pIdx</span><span class="p">{</span><span class="s">"$pKeys[$pi]"</span><span class="p">}</span><span class="o">.</span><span class="s">"]---\n"</span><span class="p">;}</span><span class="k">print</span><span class="s">"----------------------------------------------------------------------\n"</span><span class="p">;}</span><span class="k">sub</span><span class="w"> </span><span class="nf">efDNA_RC</span><span class="p">{</span><span class="k">my</span><span class="p">(</span><span class="nv">$qLine</span><span class="p">)</span><span class="o">=</span><span class="nv">@_</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@qList</span><span class="o">=</span><span class="nb">split</span><span class="p">(</span><span class="sr">//</span><span class="p">,</span><span class="nv">$qLine</span><span class="p">);</span>
+<span class="k">my</span><span class="nv">$qi</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">my</span><span class="nv">@qL</span><span class="o">=</span><span class="p">();</span>
+<span class="k">my</span><span class="nv">$qLength</span><span class="o">=</span><span class="nb">scalar</span><span class="nv">@qList</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="nv">$qLength</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">){</span><span class="k">for</span><span class="p">(</span><span class="nv">$qi</span><span class="o">=</span><span class="nv">$qLength</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span><span class="nv">$qi</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span><span class="nv">$qi</span><span class="o">--</span><span class="p">){</span><span class="k">if</span><span class="p">(</span><span class="nv">$qList</span><span class="p">[</span><span class="nv">$qi</span><span class="p">]</span><span class="ow">eq</span><span class="s">"A"</span><span class="p">){</span><span class="nv">$qL</span><span class="p">[</span><span class="nv">$qLength</span><span class="o">-</span><span class="nv">$qi</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s">"T"</span><span class="p">;}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">$qList</span><span class="p">[</span><span class="nv">$qi</span><span class="p">]</span><span class="ow">eq</span><span class="s">"T"</span><span class="p">){</span><span class="nv">$qL</span><span class="p">[</span><span class="nv">$qLength</span><span class="o">-</span><span class="nv">$qi</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s">"A"</span><span class="p">;}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">$qList</span><span class="p">[</span><span class="nv">$qi</span><span class="p">]</span><span class="ow">eq</span><span class="s">"G"</span><span class="p">){</span><span class="nv">$qL</span><span class="p">[</span><span class="nv">$qLength</span><span class="o">-</span><span class="nv">$qi</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s">"C"</span><span class="p">;}</span><span class="k">elsif</span><span class="p">(</span><span class="nv">$qList</span><span class="p">[</span><span class="nv">$qi</span><span class="p">]</span><span class="ow">eq</span><span class="s">"C"</span><span class="p">){</span><span class="nv">$qL</span><span class="p">[</span><span class="nv">$qLength</span><span class="o">-</span><span class="nv">$qi</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s">"G"</span><span class="p">;}</span><span class="k">else</span><span class="p">{</span><span class="nv">$qL</span><span class="p">[</span><span class="nv">$qLength</span><span class="o">-</span><span class="nv">$qi</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="s">"N"</span><span class="p">;}}</span><span class="nv">$qLine</span><span class="o">=</span><span class="nb">join</span><span class="p">(</span><span class="s">""</span><span class="p">,</span><span class="nv">@qL</span><span class="p">);}</span><span class="k">else</span><span class="p">{</span><span class="nv">$qLine</span><span class="o">=</span><span class="s">""</span><span class="p">;}</span><span class="k">return</span><span class="nv">$qLine</span><span class="p">;}</span>
+</code></pre></div>
+</article>
+</div>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+  Back to top
+</button>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.sections", "navigation.tabs", "toc.integrate", "navigation.top"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+<script src="../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
