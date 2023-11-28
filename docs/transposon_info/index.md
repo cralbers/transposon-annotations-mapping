@@ -1,6 +1,6 @@
 # General TE info
 
-Just a list of some random TE resources and info that I found and don't want to lose track of.
+Just a list of some random TE resources and info that I found and don't want to lose track of and that could maybe be helpful for some other people :)
 
 ## TE info sheet
 
