@@ -41,7 +41,8 @@ aliases: [step 2.2]
 * LTR Harvest runtimes are really variable- runs in like 10 seconds on Libuda CB but literally took  and hour and a half for the Kim CB, and won't even run for nonTGCA motifs on Kim CB (according to the paper, the program run time is really dependent on how repetitive the genome is)
 
 ## MUST
-* [MUST paper link](https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en)
+!!! note ""
+    [MUST paper link](https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en)
 - [MUST download link](http://www.healthinformaticslab.org/supp/resources.php)
     * yes, this looks sketchy
     * it will be ok
@@ -105,11 +106,11 @@ genome_MUST_dir
 | <b>MUST CLI syntax and options</b> (copied over from [https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en](https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en)|
 
 ## LTR Finder
-
-- [LTR Finder paper link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1933203/)
-- [LTR Finder github](https://github.com/xzhub/LTR_Finder)
-- [LTR Finder parallel paper link](https://mobilednajournal.biomedcentral.com/articles/10.1186/s13100-019-0193-0)
-- [LTR Finder parallel github](https://github.com/oushujun/LTR_FINDER_parallel)
+!!! note ""
+    [LTR Finder paper link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1933203/)
+    [LTR Finder github](https://github.com/xzhub/LTR_Finder)
+    [LTR Finder parallel paper link](https://mobilednajournal.biomedcentral.com/articles/10.1186/s13100-019-0193-0)
+    [LTR Finder parallel github](https://github.com/oushujun/LTR_FINDER_parallel)
 
 ### LTR Finder parallel
 #### What is it?
@@ -148,7 +149,8 @@ perl LTR_FINDER_parallel -harvest_out -seq sequence.fasta
 
 
 ## LTR Harvest
-- [LTR Harvest documentation](http://genometools.org/tools/gt_ltrharvest.html)
+!!! note ""
+    [LTR Harvest documentation](http://genometools.org/tools/gt_ltrharvest.html)
 - run locally through genometools package in specific conda env
 	- [GenomeTools](http://genometools.org/index.html)
 	```bash
@@ -209,9 +211,10 @@ gt ltrharvest -index sequence.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -ma
 
 
 # LTR Retriever
-* [LTR Retriever paper link](https://academic.oup.com/plphys/article/176/2/1410/6117145?login=true)
-* [LTR Retriever download link](https://github.com/oushujun/LTR_retriever)
-* conda download! very easy to follow installation directions on github
+!!! note ""
+    [LTR Retriever paper link](https://academic.oup.com/plphys/article/176/2/1410/6117145?login=true)
+    [LTR Retriever download link](https://github.com/oushujun/LTR_retriever)
+    conda download! very easy to follow installation directions on github
 
 ## In & Out
 
@@ -263,8 +266,8 @@ cat sequence.fa.harvest.scn sequence.fa.harvest.nonTGCA.scn sequence.fasta.finde
 
 
 ## SINE Finder
-
-- [SINE Finder paper link](https://academic.oup.com/plcell/article/23/9/3117/6097673)
+!!! note ""
+    [SINE Finder paper link](https://academic.oup.com/plcell/article/23/9/3117/6097673)
 - the program is located in the supplemental material of the paper (the alternate download link listed (german website) doesn't work, but you can try :))
   - kind of tricky to find:
     1. download the supp material
