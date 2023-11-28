@@ -42,7 +42,7 @@ aliases: [step 2.2]
 
 ## MUST
 !!! note ""
-    [MUST paper link](https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en)
+    - [MUST paper link](https://www.degruyter.com/document/doi/10.1515/jib-2017-0029/html?lang=en)
 - [MUST download link](http://www.healthinformaticslab.org/supp/resources.php)
     * yes, this looks sketchy
     * it will be ok
@@ -107,10 +107,10 @@ genome_MUST_dir
 
 ## LTR Finder
 !!! note ""
-    [LTR Finder paper link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1933203/)
-    [LTR Finder github](https://github.com/xzhub/LTR_Finder)
-    [LTR Finder parallel paper link](https://mobilednajournal.biomedcentral.com/articles/10.1186/s13100-019-0193-0)
-    [LTR Finder parallel github](https://github.com/oushujun/LTR_FINDER_parallel)
+    - [LTR Finder paper link](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1933203/)
+    - [LTR Finder github](https://github.com/xzhub/LTR_Finder)
+    - [LTR Finder parallel paper link](https://mobilednajournal.biomedcentral.com/articles/10.1186/s13100-019-0193-0)
+    - [LTR Finder parallel github](https://github.com/oushujun/LTR_FINDER_parallel)
 
 ### LTR Finder parallel
 #### What is it?
@@ -212,9 +212,9 @@ gt ltrharvest -index sequence.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -ma
 
 # LTR Retriever
 !!! note ""
-    [LTR Retriever paper link](https://academic.oup.com/plphys/article/176/2/1410/6117145?login=true)
-    [LTR Retriever download link](https://github.com/oushujun/LTR_retriever)
-    conda download! very easy to follow installation directions on github
+    - [LTR Retriever paper link](https://academic.oup.com/plphys/article/176/2/1410/6117145?login=true)
+    - [LTR Retriever download link](https://github.com/oushujun/LTR_retriever)
+    - conda download! very easy to follow installation directions on github
 
 ## In & Out
 
