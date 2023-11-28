@@ -5,7 +5,8 @@ aliases: [code]
 # Code and Example Scripts
 
 ## TE Ult source code changes
-
+!!! note ""
+    these are documents describing the changes I made to the TEUlt source code, but you can also download the complete edited source code from the github link at the top right (or [here](https://github.com/cralbers/transposons-annotations-mapping-code))
 - LTR Retriever integration into TEUlt: [[LTRRet_integration.md]]
 - Other random TEUlt source code changes: [[other_source_changes.md]]
 
