@@ -210,13 +210,13 @@ gt ltrharvest -index sequence.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -ma
 ![[ltrharvest_CLI.png]]
 
 
-# LTR Retriever
+## LTR Retriever
 !!! note ""
     - [LTR Retriever paper link](https://academic.oup.com/plphys/article/176/2/1410/6117145?login=true)
     - [LTR Retriever download link](https://github.com/oushujun/LTR_retriever)
     - conda download! very easy to follow installation directions on github
 
-## In & Out
+### In & Out
 
 <table cellpadding="5" style="border: 1px solid black">
     <tr style="border: 1px solid black">
@@ -231,14 +231,14 @@ gt ltrharvest -index sequence.index -minlenltr 100 -maxlenltr 7000 -mintsd 4 -ma
 
 - **use genome file that was made during TEUlt setup** (you may have to download from Talapas or copy to new directory, but **DO NOT MOVE THE ORIGINAL FILE OUT OF THE TE ULT DIRECTORY**)
 
-### Dependencies
+#### Dependencies
 - TRF 
 - BLAST+ 
 - BLAST or CD-HIT
 - HMMER
 - RepeatMasker
 
-### getting LTR RT candidates
+#### getting LTR RT candidates
 1. it is sufficient to use only results from [[prgrm_LTRFinder|LTR Finder]] and [[prgrm_LTRHarvest|LTR Harvest]] (pro tip: the output files from these two LTR RT candidate finders do not have to be altered for input into LTR Retriever!)
 2. create a new directory (calling this ltrret_dir for the rest of this) (doesn't really matter where this directory is located at this point) and copy over the following files:
 	- **from LTR Harvest:** sequence.fa.harvest.scn and sequence.fa.harvest.nonTGCA.scn (if you decide to create/use this file for the non TGCA motif option in LTR Retriever)
@@ -265,7 +265,7 @@ cat sequence.fa.harvest.scn sequence.fa.harvest.nonTGCA.scn sequence.fasta.finde
 ```
 
 
-## SINE Finder
+##  SINE Finder
 !!! note ""
     [SINE Finder paper link](https://academic.oup.com/plcell/article/23/9/3117/6097673)
 - the program is located in the supplemental material of the paper (the alternate download link listed (german website) doesn't work, but you can try :))
